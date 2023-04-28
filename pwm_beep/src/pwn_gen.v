@@ -17,6 +17,8 @@ module pwn_gen (
     
     reg     [23:0]      cnt_300     ;
     reg     [5:0]       cnt_note    ;
+    reg     [15:0]      cnt_freq    ;
+    reg     [5:0]       lut_data    ;
 
     always @(posedge clk or negedge rstn) begin
         if(!rstn) begin
