@@ -5,15 +5,15 @@ module pwn_gen (
     output  wire        pwm
 );
 
-    parameter   MAX300  =   24'd1500_0000   ;
-    parameter   Notes   =   6'd44           ;
-    parameter   DO  	=   16'd47750		;//1
-    parameter   RE  	=   16'd42550		;//2
-    parameter   MI  	=   16'd37900		;//3
-    parameter   FA  	=   16'd37550		;//4
-    parameter   SO  	=   16'd31850		;//5
-    parameter   LA      =   16'd28400		;//6
-    parameter   XI      =   16'd25400		;//7
+    parameter   MAX300  =   24'd1500_0000  ;
+    parameter   Notes   =   6'd44          ;
+    parameter   DO  	=   16'd47750	   ;//1
+    parameter   RE  	=   16'd42550	   ;//2
+    parameter   MI  	=   16'd37900	   ;//3
+    parameter   FA  	=   16'd37550	   ;//4
+    parameter   SO  	=   16'd31850	   ;//5
+    parameter   LA      =   16'd28400	   ;//6
+    parameter   XI      =   16'd25400	   ;//7
     
     reg     [23:0]      cnt_300     ;
     reg     [5:0]       cnt_note    ;
