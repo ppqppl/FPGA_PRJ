@@ -1,0 +1,1009 @@
+Analysis & Synthesis report for AUTO_Buy
+Fri Apr 28 17:54:11 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |AUTO_Buy|sel_drive:inst_sel_drive|current_state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: sel_drive:inst_sel_drive
+ 16. Parameter Settings for User Entity Instance: machine_drive:inst_machine_drive
+ 17. Parameter Settings for User Entity Instance: led_drive:inst_led
+ 18. Parameter Settings for User Entity Instance: freq_select:inst_freq_select
+ 19. Parameter Settings for User Entity Instance: beep_drive:inst_beep_drive
+ 20. Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key0
+ 21. Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key1
+ 22. Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key2
+ 23. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod5
+ 24. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod0
+ 25. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div0
+ 26. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod4
+ 27. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div2
+ 28. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod2
+ 29. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div1
+ 30. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod1
+ 31. Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod3
+ 32. Parameter Settings for Inferred Entity Instance: sel_drive:inst_sel_drive|lpm_divide:Mod0
+ 33. Port Connectivity Checks: "led_drive:inst_led"
+ 34. Port Connectivity Checks: "machine_drive:inst_machine_drive"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 28 17:54:11 2023           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; AUTO_Buy                                        ;
+; Top-level Entity Name              ; AUTO_Buy                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 1,136                                           ;
+;     Total combinational functions  ; 1,121                                           ;
+;     Dedicated logic registers      ; 339                                             ;
+; Total registers                    ; 339                                             ;
+; Total pins                         ; 31                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; AUTO_Buy           ; AUTO_Buy           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; ../src/sel_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v                                      ;         ;
+; ../src/seg_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v                                      ;         ;
+; ../src/machine_driver.v          ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v                                  ;         ;
+; ../src/led_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/led_driver.v                                      ;         ;
+; ../src/lanterns.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/lanterns.v                                        ;         ;
+; ../src/key_debounce.v            ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v                                    ;         ;
+; ../src/freq_select.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v                                     ;         ;
+; ../src/beep_driver.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v                                     ;         ;
+; ../src/AUTO_Buy.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v                                        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
+; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_l9m.tdf                             ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_akh.tdf                        ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf                              ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_7pc.tdf                                ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_8pc.tdf                                ;         ;
+; db/lpm_divide_o9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_o9m.tdf                             ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_dkh.tdf                        ;         ;
+; db/alt_u_div_e4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_e4f.tdf                              ;         ;
+; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_ihm.tdf                             ;         ;
+; db/lpm_divide_fcm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_fcm.tdf                             ;         ;
+; db/sign_div_unsign_4nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_4nh.tdf                        ;         ;
+; db/alt_u_div_s9f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf                              ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 1,136       ;
+;                                             ;             ;
+; Total combinational functions               ; 1121        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 430         ;
+;     -- 3 input functions                    ; 196         ;
+;     -- <=2 input functions                  ; 495         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 737         ;
+;     -- arithmetic mode                      ; 384         ;
+;                                             ;             ;
+; Total registers                             ; 339         ;
+;     -- Dedicated logic registers            ; 339         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 31          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; rst_n~input ;
+; Maximum fan-out                             ; 345         ;
+; Total fan-out                               ; 4586        ;
+; Average fan-out                             ; 3.01        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                            ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |AUTO_Buy                                 ; 1121 (5)            ; 339 (0)                   ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |AUTO_Buy                                                                                                                          ; AUTO_Buy            ; work         ;
+;    |beep_drive:inst_beep_drive|           ; 74 (74)             ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|beep_drive:inst_beep_drive                                                                                               ; beep_drive          ; work         ;
+;    |freq_select:inst_freq_select|         ; 300 (300)           ; 67 (67)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|freq_select:inst_freq_select                                                                                             ; freq_select         ; work         ;
+;    |key_debounce:inst_key_debounce_key0|  ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|key_debounce:inst_key_debounce_key0                                                                                      ; key_debounce        ; work         ;
+;    |key_debounce:inst_key_debounce_key1|  ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|key_debounce:inst_key_debounce_key1                                                                                      ; key_debounce        ; work         ;
+;    |key_debounce:inst_key_debounce_key2|  ; 31 (31)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|key_debounce:inst_key_debounce_key2                                                                                      ; key_debounce        ; work         ;
+;    |lanterns:inst_lanterns|               ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|lanterns:inst_lanterns                                                                                                   ; lanterns            ; work         ;
+;    |led_drive:inst_led|                   ; 142 (142)           ; 65 (65)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|led_drive:inst_led                                                                                                       ; led_drive           ; work         ;
+;    |machine_drive:inst_machine_drive|     ; 124 (124)           ; 60 (60)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|machine_drive:inst_machine_drive                                                                                         ; machine_drive       ; work         ;
+;    |seg_drive:inst_seg_drive|             ; 301 (50)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive                                                                                                 ; seg_drive           ; work         ;
+;       |lpm_divide:Div0|                   ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div0|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div0|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Div1|                   ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div1|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Div2|                   ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ihm:auto_generated|  ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div2|lpm_divide_ihm:auto_generated                                                   ; lpm_divide_ihm      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 46 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div2|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Div2|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_o9m:auto_generated|  ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod0|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m      ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
+;                |alt_u_div_e4f:divider|    ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod0|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f       ; work         ;
+;       |lpm_divide:Mod1|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod1|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod1|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod1|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;       |lpm_divide:Mod4|                   ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_o9m:auto_generated|  ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod4|lpm_divide_o9m:auto_generated                                                   ; lpm_divide_o9m      ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod4|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
+;                |alt_u_div_e4f:divider|    ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod4|lpm_divide_o9m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_e4f:divider ; alt_u_div_e4f       ; work         ;
+;       |lpm_divide:Mod5|                   ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l9m:auto_generated|  ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod5|lpm_divide_l9m:auto_generated                                                   ; lpm_divide_l9m      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod5|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_84f:divider|    ; 43 (43)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|seg_drive:inst_seg_drive|lpm_divide:Mod5|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ; alt_u_div_84f       ; work         ;
+;    |sel_drive:inst_sel_drive|             ; 75 (41)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|sel_drive:inst_sel_drive                                                                                                 ; sel_drive           ; work         ;
+;       |lpm_divide:Mod0|                   ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|sel_drive:inst_sel_drive|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fcm:auto_generated|  ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated                                                   ; lpm_divide_fcm      ; work         ;
+;             |sign_div_unsign_4nh:divider| ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider                       ; sign_div_unsign_4nh ; work         ;
+;                |alt_u_div_s9f:divider|    ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AUTO_Buy|sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider ; alt_u_div_s9f       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |AUTO_Buy|sel_drive:inst_sel_drive|current_state                                                                                               ;
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+; Name                 ; current_state.state5 ; current_state.state4 ; current_state.state3 ; current_state.state2 ; current_state.state1 ; current_state.state0 ;
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+; current_state.state0 ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ;
+; current_state.state1 ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 1                    ;
+; current_state.state2 ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 1                    ;
+; current_state.state3 ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 1                    ;
+; current_state.state4 ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.state5 ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal           ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------+------------------------+
+; sel_drive:inst_sel_drive|next_state.state5_190     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; sel_drive:inst_sel_drive|next_state.state4_194     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; sel_drive:inst_sel_drive|next_state.state3_198     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; sel_drive:inst_sel_drive|next_state.state2_202     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; sel_drive:inst_sel_drive|next_state.state1_206     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; sel_drive:inst_sel_drive|next_state.state0_210     ; sel_drive:inst_sel_drive|flag ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                               ;                        ;
++----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++--------------------------------------------------+------------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                         ;
++--------------------------------------------------+------------------------------------------------------------+
+; machine_drive:inst_machine_drive|price_need[5,6] ; Stuck at GND due to stuck port data_in                     ;
+; sel_drive:inst_sel_drive|cnt[10..20]             ; Stuck at GND due to stuck port data_in                     ;
+; led_drive:inst_led|led_flash[1..3]               ; Merged with led_drive:inst_led|led_flash[0]                ;
+; machine_drive:inst_machine_drive|price_need[0]   ; Merged with machine_drive:inst_machine_drive|price_need[4] ;
+; machine_drive:inst_machine_drive|led_value[3]    ; Stuck at GND due to stuck port data_in                     ;
+; freq_select:inst_freq_select|spec_data[0,17..19] ; Stuck at GND due to stuck port data_in                     ;
+; freq_select:inst_freq_select|spec_data[1]        ; Merged with freq_select:inst_freq_select|spec_data[5]      ;
+; freq_select:inst_freq_select|spec_data[13]       ; Merged with freq_select:inst_freq_select|spec_data[7]      ;
+; freq_select:inst_freq_select|spec_data[3,12]     ; Merged with freq_select:inst_freq_select|spec_data[8]      ;
+; freq_select:inst_freq_select|spec_data[16]       ; Merged with freq_select:inst_freq_select|spec_data[15]     ;
+; sel_drive:inst_sel_drive|current_state~9         ; Lost fanout                                                ;
+; sel_drive:inst_sel_drive|current_state~10        ; Lost fanout                                                ;
+; sel_drive:inst_sel_drive|current_state~11        ; Lost fanout                                                ;
+; Total Number of Removed Registers = 30           ;                                                            ;
++--------------------------------------------------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++------------------------------------------------+---------------------------+-----------------------------------------------+
+; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register        ;
++------------------------------------------------+---------------------------+-----------------------------------------------+
+; machine_drive:inst_machine_drive|price_need[6] ; Stuck at GND              ; machine_drive:inst_machine_drive|led_value[3] ;
+;                                                ; due to stuck port data_in ;                                               ;
++------------------------------------------------+---------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 339   ;
+; Number of registers using Synchronous Clear  ; 46    ;
+; Number of registers using Synchronous Load   ; 84    ;
+; Number of registers using Asynchronous Clear ; 339   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 86    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; beep_drive:inst_beep_drive|beep                     ; 2       ;
+; machine_drive:inst_machine_drive|led_value[0]       ; 64      ;
+; led_drive:inst_led|led_running[0]                   ; 2       ;
+; led_drive:inst_led|led_running[1]                   ; 2       ;
+; led_drive:inst_led|led_running[2]                   ; 2       ;
+; led_drive:inst_led|led_running[3]                   ; 2       ;
+; machine_drive:inst_machine_drive|price_need[2]      ; 6       ;
+; key_debounce:inst_key_debounce_key1|key_value       ; 4       ;
+; key_debounce:inst_key_debounce_key0|key_value       ; 4       ;
+; key_debounce:inst_key_debounce_key2|key_value       ; 5       ;
+; beep_drive:inst_beep_drive|flag_beep_time_out       ; 5       ;
+; machine_drive:inst_machine_drive|flag_can_operation ; 14      ;
+; led_drive:inst_led|cnt_time_flash[0]                ; 2       ;
+; led_drive:inst_led|cnt_time_running[0]              ; 2       ;
+; freq_select:inst_freq_select|spec_data[8]           ; 10      ;
+; freq_select:inst_freq_select|spec_data[4]           ; 5       ;
+; freq_select:inst_freq_select|spec_data[5]           ; 7       ;
+; freq_select:inst_freq_select|spec_data[6]           ; 6       ;
+; freq_select:inst_freq_select|spec_data[10]          ; 5       ;
+; freq_select:inst_freq_select|spec_data[14]          ; 6       ;
+; key_debounce:inst_key_debounce_key1|key_reg         ; 2       ;
+; key_debounce:inst_key_debounce_key0|key_reg         ; 2       ;
+; key_debounce:inst_key_debounce_key2|key_reg         ; 2       ;
+; Total number of inverted registers = 23             ;         ;
++-----------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AUTO_Buy|machine_drive:inst_machine_drive|led_value[2]      ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |AUTO_Buy|led_drive:inst_led|cnt_time_running[25]            ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |AUTO_Buy|led_drive:inst_led|cnt_time_flash[16]              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |AUTO_Buy|freq_select:inst_freq_select|spec_cnt[4]           ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|key_debounce:inst_key_debounce_key2|delay_cnt[1]   ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|key_debounce:inst_key_debounce_key1|delay_cnt[0]   ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|key_debounce:inst_key_debounce_key0|delay_cnt[7]   ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |AUTO_Buy|beep_drive:inst_beep_drive|cnt_time[1]             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|machine_drive:inst_machine_drive|price_put_last[1] ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|machine_drive:inst_machine_drive|cnt_time[18]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |AUTO_Buy|machine_drive:inst_machine_drive|price_out[6]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AUTO_Buy|led_drive:inst_led|Mux3                            ;
+; 64:1               ; 4 bits    ; 168 LEs       ; 28 LEs               ; 140 LEs                ; No         ; |AUTO_Buy|seg_drive:inst_seg_drive|Selector3                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sel_drive:inst_sel_drive ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; MAX_NUM        ; 1000  ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: machine_drive:inst_machine_drive ;
++----------------+------------------------------+-------------------------------+
+; Parameter Name ; Value                        ; Type                          ;
++----------------+------------------------------+-------------------------------+
+; P1             ; 0000101                      ; Unsigned Binary               ;
+; P2             ; 0001111                      ; Unsigned Binary               ;
+; P3             ; 0011000                      ; Unsigned Binary               ;
+; P4             ; 0011110                      ; Unsigned Binary               ;
+; MAX_TIME       ; 0101111101011110000100000000 ; Unsigned Binary               ;
++----------------+------------------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_drive:inst_led   ;
++------------------+------------------------------+-----------------+
+; Parameter Name   ; Value                        ; Type            ;
++------------------+------------------------------+-----------------+
+; MAX_TIME_RUNNING ; 0000001111010000100100000000 ; Unsigned Binary ;
+; MAX_TIME_FLASH   ; 0000100110001001011010000000 ; Unsigned Binary ;
++------------------+------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freq_select:inst_freq_select ;
++----------------+----------------------+-----------------------------------+
+; Parameter Name ; Value                ; Type                              ;
++----------------+----------------------+-----------------------------------+
+; NOTE_NUM       ; 110010               ; Unsigned Binary                   ;
+; DO             ; 00010111010101110000 ; Unsigned Binary                   ;
+; RE             ; 00010100010011001110 ; Unsigned Binary                   ;
+; MI             ; 00010010100001001010 ; Unsigned Binary                   ;
+; FA             ; 00010001011110110000 ; Unsigned Binary                   ;
+; SO             ; 00001111100100000110 ; Unsigned Binary                   ;
+; LA             ; 00001101110111100000 ; Unsigned Binary                   ;
+; XI             ; 00001100010110101000 ; Unsigned Binary                   ;
+; HDO            ; 1011101010000110     ; Unsigned Binary                   ;
+; HRE            ; 1010010100001010     ; Unsigned Binary                   ;
+; HMI            ; 1001010000001100     ; Unsigned Binary                   ;
+; HFA            ; 1001001010101110     ; Unsigned Binary                   ;
+; HSO            ; 0111110001101010     ; Unsigned Binary                   ;
+; HLA            ; 0110111011110000     ; Unsigned Binary                   ;
+; HXI            ; 0110001100111000     ; Unsigned Binary                   ;
+; LDO            ; 00101110100101010000 ; Unsigned Binary                   ;
+; LRE            ; 00101001100001000010 ; Unsigned Binary                   ;
+; LMI            ; 00100100111111001100 ; Unsigned Binary                   ;
+; LFA            ; 00100010111110010010 ; Unsigned Binary                   ;
+; LSO            ; 00011111001000111110 ; Unsigned Binary                   ;
+; LLA            ; 00011011101111000000 ; Unsigned Binary                   ;
+; LXI            ; 00011000101101010000 ; Unsigned Binary                   ;
++----------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: beep_drive:inst_beep_drive ;
++----------------+------------------------------+-------------------------+
+; Parameter Name ; Value                        ; Type                    ;
++----------------+------------------------------+-------------------------+
+; MAX_TIME       ; 100110001001011010000000     ; Unsigned Binary         ;
+; MAX_TIME_MUSIC ; 1110111001101011001010000000 ; Unsigned Binary         ;
++----------------+------------------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key0 ;
++----------------+----------------------+------------------------------------------+
+; Parameter Name ; Value                ; Type                                     ;
++----------------+----------------------+------------------------------------------+
+; MAX_NUM        ; 11110100001001000000 ; Unsigned Binary                          ;
++----------------+----------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key1 ;
++----------------+----------------------+------------------------------------------+
+; Parameter Name ; Value                ; Type                                     ;
++----------------+----------------------+------------------------------------------+
+; MAX_NUM        ; 11110100001001000000 ; Unsigned Binary                          ;
++----------------+----------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_debounce:inst_key_debounce_key2 ;
++----------------+----------------------+------------------------------------------+
+; Parameter Name ; Value                ; Type                                     ;
++----------------+----------------------+------------------------------------------+
+; MAX_NUM        ; 11110100001001000000 ; Unsigned Binary                          ;
++----------------+----------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod5 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod4 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div2 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod2 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 7              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_o9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seg_drive:inst_seg_drive|lpm_divide:Mod3 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                         ;
+; LPM_WIDTHD             ; 4              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_l9m ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sel_drive:inst_sel_drive|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 22             ; Untyped                                         ;
+; LPM_WIDTHD             ; 10             ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_fcm ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "led_drive:inst_led"                                                                                                                                                              ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; value ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "machine_drive:inst_machine_drive"                                                                                                                                          ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                               ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; led_value ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 31                          ;
+; cycloneiii_ff         ; 339                         ;
+;     CLR               ; 147                         ;
+;     CLR SCLR          ; 46                          ;
+;     CLR SLD           ; 60                          ;
+;     ENA CLR           ; 62                          ;
+;     ENA CLR SLD       ; 24                          ;
+; cycloneiii_lcell_comb ; 1127                        ;
+;     arith             ; 384                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 289                         ;
+;         3 data inputs ; 92                          ;
+;     normal            ; 743                         ;
+;         0 data inputs ; 27                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 154                         ;
+;         3 data inputs ; 104                         ;
+;         4 data inputs ; 430                         ;
+;                       ;                             ;
+; Max LUT depth         ; 16.00                       ;
+; Average LUT depth     ; 6.44                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri Apr 28 17:53:57 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUTO_Buy -c AUTO_Buy
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/sel_driver.v
+    Info (12023): Found entity 1: sel_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/seg_driver.v
+    Info (12023): Found entity 1: seg_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/machine_driver.v
+    Info (12023): Found entity 1: machine_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/led_driver.v
+    Info (12023): Found entity 1: led_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/led_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/lanterns.v
+    Info (12023): Found entity 1: lanterns File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/lanterns.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/key_driver.v
+    Info (12023): Found entity 1: key_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/key_debounce.v
+    Info (12023): Found entity 1: key_debounce File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/freq_select.v
+    Info (12023): Found entity 1: freq_select File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/beep_driver.v
+    Info (12023): Found entity 1: beep_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/auto_buy.v
+    Info (12023): Found entity 1: AUTO_Buy File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 1
+Info (12127): Elaborating entity "AUTO_Buy" for the top level hierarchy
+Info (12128): Elaborating entity "sel_drive" for hierarchy "sel_drive:inst_sel_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 34
+Warning (10230): Verilog HDL assignment warning at sel_driver.v(37): truncated value with size 32 to match size of target (21) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
+Warning (10240): Verilog HDL Always Construct warning at sel_driver.v(57): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(101): variable "price_out" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 101
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(109): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 109
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(117): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 117
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(125): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 125
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(133): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 133
+Info (10041): Inferred latch for "next_state.state5" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state4" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state3" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state2" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state1" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state0" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
+Info (12128): Elaborating entity "seg_drive" for hierarchy "seg_drive:inst_seg_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 47
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(16): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(17): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 17
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(19): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(20): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(22): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(23): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
+Info (12128): Elaborating entity "machine_drive" for hierarchy "machine_drive:inst_machine_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 59
+Warning (10230): Verilog HDL assignment warning at machine_driver.v(72): truncated value with size 32 to match size of target (2) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v Line: 72
+Info (12128): Elaborating entity "led_drive" for hierarchy "led_drive:inst_led" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 68
+Info (12128): Elaborating entity "freq_select" for hierarchy "freq_select:inst_freq_select" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 78
+Warning (10272): Verilog HDL Case Statement warning at freq_select.v(220): case item expression covers a value already covered by a previous case item File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 220
+Warning (10230): Verilog HDL assignment warning at freq_select.v(311): truncated value with size 20 to match size of target (19) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 311
+Info (12128): Elaborating entity "lanterns" for hierarchy "lanterns:inst_lanterns" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 87
+Info (12128): Elaborating entity "beep_drive" for hierarchy "beep_drive:inst_beep_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 97
+Info (12128): Elaborating entity "key_debounce" for hierarchy "key_debounce:inst_key_debounce_key0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 107
+Warning (10230): Verilog HDL assignment warning at key_debounce.v(30): truncated value with size 32 to match size of target (20) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v Line: 30
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+Info (278001): Inferred 10 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod5" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod4" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div1" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod1" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod3" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sel_drive:inst_sel_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod5" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod5" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l9m.tdf
+    Info (12023): Found entity 1: lpm_divide_l9m File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_l9m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_akh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
+    Info (12023): Found entity 1: alt_u_div_84f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_o9m.tdf
+    Info (12023): Found entity 1: lpm_divide_o9m File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_o9m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_dkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e4f.tdf
+    Info (12023): Found entity 1: alt_u_div_e4f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_e4f.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Div0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Div0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
+    Info (12023): Found entity 1: lpm_divide_ihm File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_ihm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod2" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod3" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod3" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "sel_drive:inst_sel_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
+Info (12133): Instantiated megafunction "sel_drive:inst_sel_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "22"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fcm.tdf
+    Info (12023): Found entity 1: lpm_divide_fcm File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_fcm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_4nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_4nh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_4nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s9f.tdf
+    Info (12023): Found entity 1: alt_u_div_s9f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf Line: 26
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v Line: 7
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider|add_sub_6_result_int[0]~0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf Line: 56
+    Info (17048): Logic cell "sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider|add_sub_20_result_int[2]~18" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf Line: 91
+Info (144001): Generated suppressed messages file D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/output_files/AUTO_Buy.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1174 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 1143 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Fri Apr 28 17:54:11 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:09
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/output_files/AUTO_Buy.map.smsg.
+
+
