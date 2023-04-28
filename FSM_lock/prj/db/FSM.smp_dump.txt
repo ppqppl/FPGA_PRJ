@@ -1,0 +1,20 @@
+
+State Machine - |FSM|number
+Name number.0111 number.0110 number.0101 number.0100 number.0011 number.0010 number.0001 number.1000 
+number.0001 0 0 0 0 0 0 0 0 
+number.0010 0 0 0 0 0 1 1 0 
+number.0011 0 0 0 0 1 0 1 0 
+number.0100 0 0 0 1 0 0 1 0 
+number.0101 0 0 1 0 0 0 1 0 
+number.0110 0 1 0 0 0 0 1 0 
+number.0111 1 0 0 0 0 0 1 0 
+number.1000 0 0 0 0 0 0 1 1 
+
+State Machine - |FSM|cstate
+Name cstate.Error cstate.S4 cstate.S3 cstate.S2 cstate.S1 cstate.IDLE 
+cstate.IDLE 0 0 0 0 0 0 
+cstate.S1 0 0 0 0 1 1 
+cstate.S2 0 0 0 1 0 1 
+cstate.S3 0 0 1 0 0 1 
+cstate.S4 0 1 0 0 0 1 
+cstate.Error 1 0 0 0 0 1 

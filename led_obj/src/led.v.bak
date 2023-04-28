@@ -1,0 +1,45 @@
+module LED_obj(
+    input   wire            clk     ,   // 时钟信号 ， 50MHz
+    input   wire            rst_n   ,   // 复位信号 ， 下检验有效
+    output  wire    [3:0]   led_on
+);
+
+parameter   MAX1S   =   26'd5000_0000   ;      
+parameter   MAX05S  =   25'd2500_0000   ;      
+reg         [25:0]      cnt1s           ;   // 计数寄存器
+reg         [3:0]       led_r           ;
+
+/// 记录 1s 计数器设计
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin // 复位，重新计数
+        cnt1s <= 26'd0; 
+    end
+    else if(cnt1s == MAX1S - 1) begin   // 记到最大数
+        cnt1s <= 26'd0;
+    end
+    else begin
+        cnt1s <= cnt1s + 1'd1;
+    end
+        
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n) begin
+        led_r <= 4'b0001;
+    end
+    else if(cnt1s == MAX05S - 1) begin
+        led_r <= {led_r[0],led_r[3:1]};
+    end
+    else begin
+        led_r = led_r;
+    end
+end
+
+assign len_on = led_r;
+
+endmodule
+
+/*
+组合逻辑使用 = 赋值
+时序逻辑使用 <= 赋值
+*/

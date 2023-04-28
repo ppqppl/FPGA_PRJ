@@ -1,0 +1,7 @@
+
+State Machine - |fsm|cstate
+Name cstate.YELLOW cstate.GREEN cstate.RED cstate.IDLE 
+cstate.IDLE 0 0 0 0 
+cstate.RED 0 0 1 1 
+cstate.GREEN 0 1 0 1 
+cstate.YELLOW 1 0 0 1 

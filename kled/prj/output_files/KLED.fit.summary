@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Apr 25 09:36:49 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : KLED
+Top-level Entity Name : KLED
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 67 / 6,272 ( 1 % )
+    Total combinational functions : 65 / 6,272 ( 1 % )
+    Dedicated logic registers : 37 / 6,272 ( < 1 % )
+Total registers : 37
+Total pins : 10 / 180 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

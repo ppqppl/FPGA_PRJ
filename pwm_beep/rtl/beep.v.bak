@@ -1,0 +1,17 @@
+module PWM_Beep (
+    input   wire        clk     ,
+    input   wire        rstn    , 
+
+    output  reg         beep
+);
+
+always @(posedge clk or negedge rstn) begin
+    if(!rstn) begin
+        beep <= 1;
+    end
+    else begin
+        beep <= 0;
+    end
+end
+
+endmodule //beep

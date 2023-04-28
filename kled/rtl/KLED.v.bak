@@ -1,0 +1,41 @@
+module KLED (
+    input  wire       clk,
+    input  wire [3:0] key,
+    input  wire       rstn,
+    output wire [3:0] led
+);
+    
+    parameter MAX = 26'd5000_0000;
+    reg [24:0] cnt;
+    reg [3:0]  led_r;
+
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn) begin
+            cnt <= 26'd0;
+        end
+        else if(cnt == MAX - 1'd1) begin
+            cnt <= 26'd0;
+        end
+        else begin
+            cnt <= cnt + 1'd1;
+        end
+    end
+
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn) begin
+            led_r <= 4'b0000;
+        end
+        else if(key == 4'b1110) begin
+            if(cnt == MAX - 1'd1) begin
+                led_r <= {led_r[2:0],led_r[3]};
+            end
+            else begin
+               led_r = led_r; 
+            end
+        end
+        else begin
+            led_r <= led_r;
+        end
+    end
+    assign led = led_r;
+endmodule

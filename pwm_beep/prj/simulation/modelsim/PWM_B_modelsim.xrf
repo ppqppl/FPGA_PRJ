@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/code-file/fpga_prj/pwm_beep/rtl/beep.v
+source_file = 1, D:/code-file/fpga_prj/pwm_beep/prj/db/PWM_B.cbx.xml
+design_name = PWM_Beep
+instance = comp, \beep~output , beep~output, PWM_Beep, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

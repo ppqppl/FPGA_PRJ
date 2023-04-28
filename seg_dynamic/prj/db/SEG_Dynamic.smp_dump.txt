@@ -1,0 +1,18 @@
+
+State Machine - |SEG_Dynamic|sel_led_dynamic:u_sel_led_dynamic|cstate
+Name cstate.1110 cstate.1101 cstate.1100 cstate.1011 cstate.1010 cstate.1001 cstate.1000 cstate.0111 cstate.0110 cstate.0101 cstate.0100 cstate.0011 cstate.0010 cstate.0001 cstate.0000 
+cstate.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cstate.0001 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+cstate.0010 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+cstate.0011 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+cstate.0100 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+cstate.0101 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+cstate.0110 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+cstate.0111 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+cstate.1000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+cstate.1001 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+cstate.1010 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+cstate.1011 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+cstate.1100 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+cstate.1101 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cstate.1110 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

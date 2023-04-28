@@ -1,0 +1,97 @@
+module key_ctrl (
+    input     wire      clk,
+    input     wire      rst_n,
+    input     wire      key ,
+
+    output    wire      [3:0]   led
+);
+localparam MAX =25'd25_000_000 ;
+localparam MAX20 =20'd1_000_000;
+reg [19:0] cnt_20ms;
+reg [3:0]  led_r;
+reg [24:0] cnt;
+reg        start;
+reg        key_r0;//按键信号寄存器1
+reg        key_r1;//按键信号寄存器2
+reg        flag ;//开启流水信号
+//20ms倒计时计数计时器
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        cnt_20ms<=20'd0;
+    end
+    else if(start)begin
+         if(cnt_20ms==1'd1)begin
+            cnt_20ms<=20'd0;
+        end
+        else begin
+            cnt_20ms<=cnt_20ms-1'd1;
+        end
+    end
+    else begin
+       cnt_20ms<=cnt_20ms;
+    end
+end
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        cnt<=25'd0;
+    end
+    else begin
+        cnt<=1'd1;
+    end
+end
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)begin
+        led_r<=4'b0001;
+    end
+    else if(flag)begin
+        if(cnt ==MAX-1'd1)begin
+            led_r<={led_r[2:0],led_r[3]};
+        end
+        else begin
+            led_r<=led_r;
+        end
+    end
+    else begin
+        led_r<=led_r;
+    end
+end
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        key_r0<=1'b1;
+        key_r1<=1'b1;
+    end
+    else begin
+        key_r0<=key;//打一拍，同步时钟域
+        key_r1<=key_r0;//打一拍，检测按键下降沿
+    end
+end
+assign nedge=~key_r0&&key_r1;//检测到下降沿
+//start信号约束
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        flag<=1'b0;
+    end
+    else if(cnt_20ms==1'b1)begin
+        flag<=~key_r0;
+    end
+    else begin
+        flag<=flag;
+    end
+end
+always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        start<=1'b0;
+    end
+    else if(nedge)begin
+        start<=1'b1;
+    end
+    else if(cnt_20ms==1'b1)begin
+        start<=1'b0;
+    end
+    else begin
+        start<=start;
+    end
+end
+
+assign led =led_r;
+endmodule

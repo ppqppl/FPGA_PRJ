@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Apr 23 16:27:59 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : LED_obj
+Top-level Entity Name : LED_obj
+Family : Cyclone IV E
+Total logic elements : 51
+    Total combinational functions : 49
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
