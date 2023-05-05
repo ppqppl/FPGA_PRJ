@@ -17,9 +17,13 @@ module i2c_ctrl (
     reg     [2:0]   nstate      ;
     reg     [2:0]   cstate      ;
     reg     [9:0]   cnt_wait    ;   // 等待 1000us 计数器
-    reg     [4:0]   cnt_clk     ;   // i2c 系统时钟寄存器
-    reg             i2c_clk     ;
+    reg     [4:0]   cnt_clk     ;   // i2c 系统时钟计数寄存器
+    reg     [1:0]   cnt_i2c     ;   // i2c 时钟计数寄存器
+    reg     [2:0]   cnt_bit     ;   // 发送 bit 计数寄存器
+    reg     [2:0]   step        ;   // 步骤信号
+    reg             i2c_clk     ;   // i2c 时钟
     reg             skip_en_1   ;   // step1 跳转使能
+    reg             i2c_end     ;   // 结束信号，本次步骤结束
 
     // 分频时钟设计
     always @(posedge sys_clk or negedge sys_rstn) begin
@@ -72,46 +76,99 @@ module i2c_ctrl (
     end
 
     // 三段式状态机，第二段，描述状态转移
-    always @(posedge sys_clk or negedge sys_rstn) begin
+    always @(*) begin
         case (cstate)
             IDLE    :   begin
-                            if(cnt_clk == MAX_CLK) begin
+                            if(skip_en_1 == 1'b1) begin
                                 nstate <= START;
                             end
                             else begin
-                                nstate <= IDLE;
+                                nstate <= cstate;
                             end
                         end
             START   :   begin
-                            if(cnt_clk == MAX_CLK) begin
+                            if(skip_en_1 == 1'b1) begin
                                 nstate <= SLAVE_ID;
                             end
                             else begin
-                                nstate <= START;
+                                nstate <= cstate;
                             end
                         end
             SLAVE_ID:   begin
-                            if(cnt_clk == MAX_CLK) begin
+                            if(skip_en_1 == 1'b1) begin
                                 nstate <= WAIT;
                             end
                             else begin
-                                nstate <= SLAVE_ID;
+                                nstate <= cstate;
                             end
                         end
             WAIT    :   begin
-                            if(cnt_clk == MAX_CLK) begin
+                            if(skip_en_1 == 1'b1) begin
                                 nstate <= STOP;
                             end
                             else begin
-                                nstate <= WAIT;
+                                nstate <= cstate;
                             end
                         end
             STOP    :   begin
-                            nstate <= IDLE;
+                            if(skip_en_1 == 1'b1) begin
+                                nstate <= IDLE;
+                            end
+                            else begin
+                                nstate <= cstate;
+                            end
                         end
             default :   begin
                             nstate <= IDLE;
                         end
         endcase
+    end
+    always @(posedge i2c_clk or negedge sys_rstn) begin
+        if(!sys_rstn) begin
+            cnt_wait    <= 10'd0    ;
+            skip_en_1   <= 1'b0     ;
+            cnt_i2c     <= 2'd0     ;
+            cnt_bit     <= 3'd0     ;
+            i2c_end     <= 1'b0     ;
+            step        <= 3'd0     ;
+        end
+        else begin
+            case (cstate)
+                IDLE    :   begin
+                                if(cnt_wait == MAX_1000) begin
+                                    cnt_wait <= 10'd0;
+                                end
+                                else begin
+                                    cnt_wait <= cnt_wait + 1'd1;
+                                end
+                            end
+                START   :   begin
+                                cnt_i2c <= cnt_i2c + 1'd1;
+                                if(cnt_i2c == 2'd2) begin
+                                    skip_en_1 <= 1'd1;
+                                end
+                                else begin
+                                    skip_en_1 <= 1'd0;       
+                                end
+                            end
+                SLAVE_ID:   begin
+                    
+                            end
+                WAIT    :   begin
+                    
+                            end
+                STOP    :   begin
+                    
+                            end
+                default :   begin   // 状态中不操作的信号在 default 中操作
+                                cnt_wait   <= 10'd0    ;
+                                skip_en_1  <= 1'b0     ;
+                                cnt_i2c    <= 2'd0     ;
+                                cnt_bit    <= 3'd0     ;
+                                i2c_end    <= 1'b0     ;
+                                step       <= step     ;
+                            end
+            endcase
+        end
     end
 endmodule //i2c_ctrl
