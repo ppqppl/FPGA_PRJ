@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at i2c_ctrl.v(30): object "SLAVE_ADDR" differs only in case from object "slave_addr" in the same scope File: D:/A_FPGA/0_class/8_prj7620_beep_seg/rtl/i2c_ctrl.v Line: 30
+Info (10281): Verilog HDL Declaration information at i2c_ctrl.v(32): object "DEVICE_ADDR" differs only in case from object "device_addr" in the same scope File: D:/A_FPGA/0_class/8_prj7620_beep_seg/rtl/i2c_ctrl.v Line: 32

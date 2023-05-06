@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at I2c_ctrl.v(14): object "SLAVE_ID" differs only in case from object "slave_id" in the same scope File: D:/code-file/FPGA_PRJ/i2c_ctrl/rtl/I2c_ctrl.v Line: 14

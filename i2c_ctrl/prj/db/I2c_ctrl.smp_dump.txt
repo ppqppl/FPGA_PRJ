@@ -1,0 +1,13 @@
+
+State Machine - |I2c_ctrl|step
+Name step.001 
+step.000 0 
+step.001 1 
+
+State Machine - |I2c_ctrl|cstate
+Name cstate.WAIT cstate.SLAVE_ID cstate.START cstate.IDLE cstate.STOP 
+cstate.IDLE 0 0 0 0 0 
+cstate.START 0 0 1 1 0 
+cstate.SLAVE_ID 0 1 0 1 0 
+cstate.WAIT 1 0 0 1 0 
+cstate.STOP 0 0 0 1 1 
