@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v
 source_file = 1, D:/code-file/FPGA_PRJ/pwm_beep/rtl/gen_pwm.v
 source_file = 1, D:/code-file/FPGA_PRJ/pwm_beep/rtl/freq_select.v
+source_file = 1, D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v
 source_file = 1, D:/code-file/FPGA_PRJ/pwm_beep/prj/db/PWM_B.cbx.xml
 design_name = PWM_Beep
 instance = comp, \beep~output , beep~output, PWM_Beep, 1

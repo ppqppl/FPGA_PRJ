@@ -1,5 +1,5 @@
 Timing Analyzer report for pwn_beep
-Sat Apr 29 20:21:14 2023
+Thu Jun 01 10:15:21 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -98,13 +98,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.4%      ;
-;     Processors 3-8         ;   1.3%      ;
+;     Processors 2-8         ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -117,13 +116,13 @@ refer to the applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary              ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 99.99 MHz ; 99.99 MHz       ; clk        ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 104.72 MHz ; 104.72 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -138,7 +137,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; clk   ; -9.001 ; -284.052           ;
+; clk   ; -8.549 ; -280.255           ;
 +-------+--------+--------------------+
 
 
@@ -147,7 +146,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.743 ; 0.000              ;
+; clk   ; 0.741 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -177,106 +176,106 @@ No paths to report.
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
-; -9.001 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.391     ;
-; -8.922 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.312     ;
-; -8.806 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.196     ;
-; -8.784 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.174     ;
-; -8.733 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.123     ;
-; -8.679 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.069     ;
-; -8.656 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.046     ;
-; -8.651 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.041     ;
-; -8.640 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 10.030     ;
-; -8.425 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.389      ; 9.815      ;
-; -8.183 ; beat[6]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 9.096      ;
-; -8.104 ; beat[7]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 9.017      ;
-; -7.957 ; beat[9]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.870      ;
-; -7.915 ; beat[1]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.828      ;
-; -7.817 ; beat[0]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.730      ;
-; -7.805 ; beat[8]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.718      ;
-; -7.785 ; beat[3]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.698      ;
-; -7.784 ; beat[4]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.697      ;
-; -7.706 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.619      ;
-; -7.641 ; beat[6]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.554      ;
-; -7.629 ; beat[7]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.973      ;
-; -7.619 ; beat[5]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.532      ;
-; -7.602 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.515      ;
-; -7.595 ; beat[9]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.508      ;
-; -7.572 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.485      ;
-; -7.562 ; beat[7]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.475      ;
-; -7.560 ; beat[0]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.904      ;
-; -7.556 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.469      ;
-; -7.551 ; beat[3]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.464      ;
-; -7.548 ; beat[8]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.892      ;
-; -7.540 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.453      ;
-; -7.531 ; beat[2]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.444      ;
-; -7.501 ; beat[1]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.414      ;
-; -7.494 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.407      ;
-; -7.450 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.363      ;
-; -7.439 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.352      ;
-; -7.420 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.333      ;
-; -7.415 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.328      ;
-; -7.401 ; beat[3]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.314      ;
-; -7.398 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.311      ;
-; -7.391 ; beat[0]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.304      ;
-; -7.382 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.295      ;
-; -7.370 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.283      ;
-; -7.364 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.277      ;
-; -7.342 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.255      ;
-; -7.323 ; beat[5]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.236      ;
-; -7.321 ; beat[3]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.665      ;
-; -7.317 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.230      ;
-; -7.308 ; beat[2]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.221      ;
-; -7.307 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.220      ;
-; -7.297 ; beat[1]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.210      ;
-; -7.287 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.200      ;
-; -7.284 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.197      ;
-; -7.282 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.195      ;
-; -7.275 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.188      ;
-; -7.273 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.186      ;
-; -7.270 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.183      ;
-; -7.267 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.180      ;
-; -7.255 ; beat[6]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.599      ;
-; -7.253 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.166      ;
-; -7.251 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.164      ;
-; -7.251 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.164      ;
-; -7.235 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.148      ;
-; -7.234 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.147      ;
-; -7.225 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.138      ;
-; -7.221 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.134      ;
-; -7.206 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.119      ;
-; -7.203 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.116      ;
-; -7.198 ; beat[1]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.542      ;
-; -7.192 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.105      ;
-; -7.191 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.104      ;
-; -7.172 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.085      ;
-; -7.172 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.085      ;
-; -7.169 ; beat[4]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.082      ;
-; -7.155 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.068      ;
-; -7.154 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.067      ;
-; -7.151 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.064      ;
-; -7.149 ; beat[4]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.493      ;
-; -7.137 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 8.050      ;
-; -7.134 ; beat[8]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.047      ;
-; -7.129 ; beat[9]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.343      ; 8.473      ;
-; -7.120 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.033      ;
-; -7.093 ; beat[4]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 8.006      ;
-; -7.073 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.986      ;
-; -7.066 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.979      ;
-; -7.043 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.956      ;
-; -7.037 ; beat[6]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.950      ;
-; -7.037 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.950      ;
-; -7.033 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.946      ;
-; -7.024 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.937      ;
-; -7.021 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.934      ;
-; -7.019 ; beat[2]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.932      ;
-; -7.014 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.927      ;
-; -7.004 ; beat[6]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.917      ;
-; -7.002 ; beat[2]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.915      ;
-; -6.994 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.907      ;
-; -6.988 ; beat[2]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.901      ;
-; -6.983 ; beat[7]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.896      ;
-; -6.971 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.088     ; 7.884      ;
-; -6.969 ; beat[4]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.088     ; 7.882      ;
+; -8.549 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.947      ;
+; -8.513 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.911      ;
+; -8.393 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.791      ;
+; -8.330 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.728      ;
+; -8.197 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.595      ;
+; -8.149 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.547      ;
+; -8.104 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.502      ;
+; -8.081 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.479      ;
+; -8.039 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.967      ;
+; -8.016 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.414      ;
+; -8.003 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.931      ;
+; -7.996 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.397      ; 9.394      ;
+; -7.679 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.607      ;
+; -7.662 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.590      ;
+; -7.639 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.567      ;
+; -7.626 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.554      ;
+; -7.590 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.518      ;
+; -7.575 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.503      ;
+; -7.503 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.431      ;
+; -7.502 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.430      ;
+; -7.502 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.430      ;
+; -7.486 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.414      ;
+; -7.474 ; beat[4]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.402      ;
+; -7.459 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.387      ;
+; -7.458 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.386      ;
+; -7.431 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.359      ;
+; -7.382 ; beat[3]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.310      ;
+; -7.302 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.230      ;
+; -7.299 ; beat[0]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.227      ;
+; -7.277 ; beat[4]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.205      ;
+; -7.272 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.200      ;
+; -7.262 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.190      ;
+; -7.260 ; beat[4]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.188      ;
+; -7.233 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.161      ;
+; -7.198 ; beat[7]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.126      ;
+; -7.169 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.097      ;
+; -7.169 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.097      ;
+; -7.152 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.080      ;
+; -7.141 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.069      ;
+; -7.125 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.053      ;
+; -7.125 ; beat[6]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.053      ;
+; -7.123 ; beat[2]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 8.051      ;
+; -7.106 ; beat[2]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.034      ;
+; -7.079 ; beat[2]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.007      ;
+; -7.077 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.005      ;
+; -7.077 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 8.005      ;
+; -7.050 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.978      ;
+; -7.004 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.932      ;
+; -6.982 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.910      ;
+; -6.943 ; beat[4]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.871      ;
+; -6.938 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.866      ;
+; -6.911 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.839      ;
+; -6.886 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.814      ;
+; -6.884 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.812      ;
+; -6.858 ; beat[9]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.786      ;
+; -6.857 ; beat[6]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.785      ;
+; -6.852 ; beat[8]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.780      ;
+; -6.850 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.778      ;
+; -6.835 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.763      ;
+; -6.826 ; beat[8]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.754      ;
+; -6.816 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.744      ;
+; -6.803 ; beat[9]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.731      ;
+; -6.797 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.725      ;
+; -6.789 ; beat[2]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.717      ;
+; -6.786 ; beat[0]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.714      ;
+; -6.771 ; beat[8]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.699      ;
+; -6.760 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.688      ;
+; -6.754 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.682      ;
+; -6.714 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.642      ;
+; -6.705 ; beat[5]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.633      ;
+; -6.662 ; beat[7]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.590      ;
+; -6.661 ; beat[5]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.589      ;
+; -6.661 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.589      ;
+; -6.625 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.553      ;
+; -6.621 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.549      ;
+; -6.607 ; beat[7]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.535      ;
+; -6.601 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.529      ;
+; -6.567 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.495      ;
+; -6.558 ; beat[5]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.486      ;
+; -6.558 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.486      ;
+; -6.546 ; beat[6]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.474      ;
+; -6.539 ; beat[2]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.467      ;
+; -6.530 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.458      ;
+; -6.495 ; beat[2]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.423      ;
+; -6.495 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.423      ;
+; -6.491 ; beat[6]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.419      ;
+; -6.486 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.414      ;
+; -6.485 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.413      ;
+; -6.459 ; beat[2]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.387      ;
+; -6.452 ; beat[1]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.380      ;
+; -6.442 ; beat[6]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 7.370      ;
+; -6.425 ; beat[3]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.353      ;
+; -6.422 ; beat[1]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.350      ;
+; -6.421 ; beat[4]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.349      ;
+; -6.371 ; beat[0]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.299      ;
+; -6.370 ; beat[3]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.298      ;
+; -6.366 ; beat[4]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.294      ;
+; -6.364 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.292      ;
+; -6.360 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.288      ;
+; -6.332 ; beat[4]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.073     ; 7.260      ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -285,106 +284,106 @@ No paths to report.
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
-; 0.743 ; delay[10]            ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.035      ;
-; 0.743 ; delay[8]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.035      ;
-; 0.744 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.036      ;
-; 0.744 ; delay[6]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.036      ;
-; 0.745 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.037      ;
-; 0.746 ; delay[9]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.038      ;
-; 0.746 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.038      ;
-; 0.746 ; delay[2]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.038      ;
-; 0.746 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.098      ; 1.056      ;
-; 0.747 ; delay[7]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
-; 0.747 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
-; 0.747 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
-; 0.747 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
-; 0.747 ; delay[1]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.039      ;
-; 0.749 ; delay[3]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.041      ;
-; 0.762 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.741 ; delay[10]            ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.034      ;
+; 0.742 ; delay[8]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.035      ;
+; 0.743 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.036      ;
+; 0.743 ; delay[6]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.036      ;
+; 0.744 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.037      ;
+; 0.744 ; delay[9]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.037      ;
+; 0.745 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
+; 0.745 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
+; 0.745 ; delay[2]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
+; 0.746 ; delay[7]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
+; 0.746 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
+; 0.746 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
+; 0.746 ; delay[1]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
+; 0.747 ; delay[3]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.748 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.041      ;
+; 0.761 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.762 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
 ; 0.762 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.055      ;
 ; 0.763 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 ; 0.763 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 ; 0.763 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 ; 0.763 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
 ; 0.763 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
-; 0.763 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
-; 0.763 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.055      ;
-; 0.764 ; delay[0]             ; delay[0]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.764 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.763 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; delay[0]             ; delay[0]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
 ; 0.764 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
 ; 0.764 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
 ; 0.764 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.764 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.764 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.764 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.764 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.056      ;
-; 0.765 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.765 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.057      ;
-; 0.766 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.764 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.765 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
 ; 0.766 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
 ; 0.766 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
-; 0.766 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.058      ;
-; 0.767 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
-; 0.767 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.059      ;
-; 0.769 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.098      ; 1.079      ;
-; 0.794 ; beat[1]              ; beat[1]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.086      ;
-; 0.796 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.088      ;
-; 0.802 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.094      ;
-; 0.805 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.097      ;
-; 0.805 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.097      ;
-; 0.806 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.098      ;
-; 0.807 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.099      ;
-; 1.009 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.301      ;
-; 1.058 ; delay[3]             ; delay[5]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.350      ;
-; 1.098 ; delay[9]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.390      ;
-; 1.099 ; delay[7]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.391      ;
-; 1.099 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.391      ;
-; 1.100 ; delay[1]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.392      ;
-; 1.101 ; delay[3]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.393      ;
-; 1.106 ; delay[8]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.398      ;
-; 1.107 ; delay[6]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.399      ;
-; 1.107 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.098      ; 1.417      ;
-; 1.108 ; delay[0]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.400      ;
-; 1.109 ; delay[2]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.401      ;
-; 1.110 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.402      ;
-; 1.115 ; delay[8]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.407      ;
-; 1.116 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.408      ;
-; 1.116 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.408      ;
-; 1.116 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.408      ;
+; 0.766 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.766 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.787 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.787 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.787 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.787 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.079      ;
+; 0.789 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.081      ;
+; 0.790 ; beat[8]              ; beat[8]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.082      ;
+; 0.791 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.083      ;
+; 0.795 ; beat[1]              ; beat[1]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.087      ;
+; 0.796 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.088      ;
+; 0.813 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.105      ;
+; 0.828 ; beat[0]              ; beat[0]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.120      ;
+; 0.829 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.121      ;
+; 0.832 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.080      ; 1.124      ;
+; 1.096 ; delay[9]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.389      ;
+; 1.097 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.390      ;
+; 1.098 ; delay[7]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.391      ;
+; 1.099 ; delay[3]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.392      ;
+; 1.099 ; delay[1]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.392      ;
+; 1.100 ; delay[5]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.393      ;
+; 1.105 ; delay[8]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.398      ;
+; 1.106 ; delay[6]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.399      ;
+; 1.107 ; delay[0]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.400      ;
+; 1.108 ; delay[2]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.401      ;
+; 1.109 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.402      ;
+; 1.112 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.084      ; 1.408      ;
+; 1.114 ; delay[8]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.407      ;
+; 1.115 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.115 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.116 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.408      ;
+; 1.116 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
 ; 1.116 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.408      ;
-; 1.117 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.117 ; delay[0]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.117 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
+; 1.116 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; delay[0]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
 ; 1.117 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.117 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.117 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.117 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.409      ;
-; 1.118 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
-; 1.118 ; delay[2]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
-; 1.118 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.117 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; delay[2]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.118 ; delay[18]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
 ; 1.118 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
 ; 1.118 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
-; 1.118 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
-; 1.118 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.410      ;
-; 1.119 ; delay[18]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
-; 1.119 ; delay[5]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
-; 1.119 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
-; 1.119 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.411      ;
+; 1.118 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.124 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.417      ;
 ; 1.125 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.417      ;
-; 1.125 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.417      ;
+; 1.125 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.417      ;
 ; 1.125 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.417      ;
+; 1.125 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.418      ;
 ; 1.126 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.418      ;
+; 1.126 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.419      ;
 ; 1.126 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.418      ;
-; 1.126 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.418      ;
-; 1.126 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.418      ;
-; 1.126 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.418      ;
-; 1.127 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 1.419      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -399,7 +398,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 106.94 MHz ; 106.94 MHz      ; clk        ;      ;
+; 114.61 MHz ; 114.61 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +408,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -8.351 ; -260.993          ;
+; clk   ; -7.725 ; -256.735          ;
 +-------+--------+-------------------+
 
 
@@ -418,7 +417,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.690 ; 0.000             ;
+; clk   ; 0.689 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -448,106 +447,106 @@ No paths to report.
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
-; -8.351 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.721      ;
-; -8.268 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.638      ;
-; -8.135 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.505      ;
-; -8.124 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.494      ;
-; -8.089 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.459      ;
-; -8.050 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.420      ;
-; -7.988 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.358      ;
-; -7.921 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.291      ;
-; -7.862 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.232      ;
-; -7.747 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.368      ; 9.117      ;
-; -7.678 ; beat[6]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.601      ;
-; -7.595 ; beat[7]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.518      ;
-; -7.462 ; beat[9]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.385      ;
-; -7.292 ; beat[3]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.215      ;
-; -7.283 ; beat[1]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.206      ;
-; -7.244 ; beat[8]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.167      ;
-; -7.218 ; beat[0]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.141      ;
-; -7.213 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.136      ;
-; -7.189 ; beat[4]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.112      ;
-; -7.178 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.101      ;
-; -7.162 ; beat[6]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.085      ;
-; -7.156 ; beat[5]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.079      ;
-; -7.139 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.062      ;
-; -7.079 ; beat[7]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.002      ;
-; -7.077 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.000      ;
-; -7.061 ; beat[1]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.984      ;
-; -7.055 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.978      ;
-; -7.044 ; beat[8]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.373      ;
-; -7.044 ; beat[0]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.373      ;
-; -7.043 ; beat[3]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.966      ;
-; -7.028 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.951      ;
-; -7.008 ; beat[7]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.337      ;
-; -6.985 ; beat[2]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.908      ;
-; -6.974 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.897      ;
-; -6.964 ; beat[9]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.887      ;
-; -6.947 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.870      ;
-; -6.946 ; beat[3]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.869      ;
-; -6.934 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.857      ;
-; -6.934 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.857      ;
-; -6.930 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.853      ;
-; -6.918 ; beat[2]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.841      ;
-; -6.911 ; beat[1]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.834      ;
-; -6.899 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.822      ;
-; -6.872 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.795      ;
-; -6.867 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.790      ;
-; -6.856 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.779      ;
-; -6.856 ; beat[0]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.779      ;
-; -6.853 ; beat[5]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.776      ;
-; -6.840 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.763      ;
-; -6.836 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.759      ;
-; -6.828 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.751      ;
-; -6.821 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.744      ;
-; -6.820 ; beat[3]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.149      ;
-; -6.810 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.733      ;
-; -6.810 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.733      ;
-; -6.800 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.723      ;
-; -6.794 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.717      ;
-; -6.788 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.711      ;
-; -6.764 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.687      ;
-; -6.745 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.668      ;
-; -6.740 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.663      ;
-; -6.733 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.656      ;
-; -6.731 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.654      ;
-; -6.729 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.652      ;
-; -6.728 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.651      ;
-; -6.727 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.650      ;
-; -6.722 ; beat[6]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.051      ;
-; -6.712 ; beat[4]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.635      ;
-; -6.707 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.630      ;
-; -6.687 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.610      ;
-; -6.680 ; beat[4]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.603      ;
-; -6.678 ; beat[4]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 8.007      ;
-; -6.666 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.589      ;
-; -6.663 ; beat[8]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.586      ;
-; -6.650 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.573      ;
-; -6.647 ; beat[9]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 7.976      ;
-; -6.639 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.562      ;
-; -6.625 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.548      ;
-; -6.625 ; beat[1]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.327      ; 7.954      ;
-; -6.621 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.544      ;
-; -6.607 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.530      ;
-; -6.606 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.529      ;
-; -6.604 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.527      ;
-; -6.592 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.515      ;
-; -6.584 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.507      ;
-; -6.580 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.503      ;
-; -6.576 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.499      ;
-; -6.570 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.493      ;
-; -6.569 ; beat[2]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.492      ;
-; -6.558 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.481      ;
-; -6.545 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.468      ;
-; -6.528 ; beat[2]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.451      ;
-; -6.523 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.446      ;
-; -6.519 ; beat[6]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.442      ;
-; -6.514 ; beat[6]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.437      ;
-; -6.506 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.429      ;
-; -6.505 ; beat[3]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.428      ;
-; -6.500 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.079     ; 7.423      ;
-; -6.485 ; beat[6]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.408      ;
-; -6.470 ; beat[1]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.079     ; 7.393      ;
+; -7.725 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 9.103      ;
+; -7.698 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 9.076      ;
+; -7.675 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 9.053      ;
+; -7.629 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 9.007      ;
+; -7.505 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.883      ;
+; -7.429 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.807      ;
+; -7.420 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.798      ;
+; -7.398 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.776      ;
+; -7.393 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.771      ;
+; -7.385 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 8.323      ;
+; -7.340 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 8.278      ;
+; -7.338 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.376      ; 8.716      ;
+; -7.042 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.980      ;
+; -7.028 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.966      ;
+; -7.016 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.954      ;
+; -7.000 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.938      ;
+; -6.999 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.937      ;
+; -6.987 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.925      ;
+; -6.985 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.923      ;
+; -6.963 ; beat[4]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.901      ;
+; -6.954 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.892      ;
+; -6.935 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.873      ;
+; -6.920 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.858      ;
+; -6.898 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.836      ;
+; -6.889 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.827      ;
+; -6.883 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.821      ;
+; -6.808 ; beat[0]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.746      ;
+; -6.785 ; beat[3]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.723      ;
+; -6.777 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.715      ;
+; -6.720 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.658      ;
+; -6.711 ; beat[4]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.649      ;
+; -6.698 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.636      ;
+; -6.689 ; beat[4]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.627      ;
+; -6.689 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.627      ;
+; -6.684 ; beat[2]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.622      ;
+; -6.681 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.619      ;
+; -6.680 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.618      ;
+; -6.662 ; beat[2]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.600      ;
+; -6.658 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.596      ;
+; -6.653 ; beat[2]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.591      ;
+; -6.622 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.560      ;
+; -6.599 ; beat[7]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.537      ;
+; -6.592 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.530      ;
+; -6.585 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.523      ;
+; -6.561 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.499      ;
+; -6.550 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.488      ;
+; -6.547 ; beat[6]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.485      ;
+; -6.519 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.457      ;
+; -6.473 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.411      ;
+; -6.471 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.409      ;
+; -6.469 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.407      ;
+; -6.440 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.378      ;
+; -6.438 ; beat[6]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.376      ;
+; -6.385 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.323      ;
+; -6.376 ; beat[4]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.314      ;
+; -6.352 ; beat[9]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.290      ;
+; -6.349 ; beat[2]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.287      ;
+; -6.300 ; beat[9]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.238      ;
+; -6.298 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.236      ;
+; -6.273 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.211      ;
+; -6.269 ; beat[8]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.207      ;
+; -6.257 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.195      ;
+; -6.252 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.190      ;
+; -6.248 ; beat[8]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.186      ;
+; -6.235 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.173      ;
+; -6.217 ; beat[8]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.155      ;
+; -6.215 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.153      ;
+; -6.210 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.148      ;
+; -6.188 ; beat[0]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.126      ;
+; -6.159 ; beat[7]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.097      ;
+; -6.153 ; beat[5]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.091      ;
+; -6.136 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.074      ;
+; -6.134 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.072      ;
+; -6.117 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.055      ;
+; -6.112 ; beat[5]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.050      ;
+; -6.110 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.048      ;
+; -6.107 ; beat[7]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.045      ;
+; -6.105 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 7.043      ;
+; -6.083 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 7.021      ;
+; -6.059 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 6.997      ;
+; -6.052 ; beat[6]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.990      ;
+; -6.044 ; beat[3]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.982      ;
+; -6.021 ; beat[5]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.959      ;
+; -6.004 ; beat[4]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.942      ;
+; -6.000 ; beat[6]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.938      ;
+; -5.998 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.936      ;
+; -5.992 ; beat[3]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.930      ;
+; -5.990 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.928      ;
+; -5.987 ; beat[2]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.925      ;
+; -5.952 ; beat[6]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 6.890      ;
+; -5.952 ; beat[4]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.890      ;
+; -5.950 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.888      ;
+; -5.946 ; beat[2]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.884      ;
+; -5.944 ; beat[3]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 6.882      ;
+; -5.944 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.882      ;
+; -5.917 ; beat[2]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 6.855      ;
+; -5.912 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.850      ;
+; -5.909 ; beat[0]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.847      ;
+; -5.904 ; beat[4]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.064     ; 6.842      ;
+; -5.895 ; beat[1]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.064     ; 6.833      ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -556,106 +555,106 @@ No paths to report.
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.689 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.957      ;
 ; 0.690 ; delay[10]            ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.957      ;
-; 0.690 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.957      ;
 ; 0.691 ; delay[8]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.958      ;
 ; 0.691 ; delay[6]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.958      ;
-; 0.693 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.960      ;
-; 0.694 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.088      ; 0.977      ;
+; 0.692 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.960      ;
+; 0.693 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.961      ;
+; 0.694 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
 ; 0.695 ; delay[7]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
-; 0.695 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.695 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
+; 0.695 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.963      ;
+; 0.695 ; delay[9]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
 ; 0.695 ; delay[2]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
 ; 0.695 ; delay[1]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
-; 0.696 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
-; 0.696 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
-; 0.696 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
-; 0.696 ; delay[9]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
-; 0.697 ; delay[3]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.964      ;
-; 0.706 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
-; 0.707 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
-; 0.707 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.973      ;
-; 0.708 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.974      ;
-; 0.708 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.708 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
-; 0.709 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
-; 0.709 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
-; 0.709 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
-; 0.709 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.975      ;
-; 0.709 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.709 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.709 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.709 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.709 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
-; 0.710 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.976      ;
-; 0.710 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.710 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.710 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
-; 0.712 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
-; 0.712 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.978      ;
-; 0.712 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
-; 0.712 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
-; 0.713 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.979      ;
+; 0.698 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.073      ; 0.966      ;
+; 0.698 ; delay[3]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
+; 0.705 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.973      ;
+; 0.706 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.974      ;
+; 0.707 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.975      ;
+; 0.708 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.976      ;
+; 0.709 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.977      ;
+; 0.710 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.073      ; 0.979      ;
+; 0.712 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.979      ;
 ; 0.714 ; delay[0]             ; delay[0]             ; clk          ; clk         ; 0.000        ; 0.072      ; 0.981      ;
-; 0.717 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.088      ; 1.000      ;
+; 0.729 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.996      ;
+; 0.729 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.996      ;
+; 0.729 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.996      ;
+; 0.730 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.072      ; 0.997      ;
+; 0.733 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.000      ;
+; 0.735 ; beat[8]              ; beat[8]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.002      ;
+; 0.735 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.002      ;
 ; 0.737 ; beat[1]              ; beat[1]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.004      ;
-; 0.739 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.006      ;
-; 0.743 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.010      ;
-; 0.747 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.014      ;
-; 0.748 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.015      ;
-; 0.749 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.016      ;
-; 0.750 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.017      ;
-; 0.890 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.157      ;
-; 0.965 ; delay[3]             ; delay[5]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.232      ;
-; 1.011 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.088      ; 1.294      ;
+; 0.739 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.006      ;
+; 0.756 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.023      ;
+; 0.771 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.038      ;
+; 0.772 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.039      ;
+; 0.773 ; beat[0]              ; beat[0]              ; clk          ; clk         ; 0.000        ; 0.072      ; 1.040      ;
 ; 1.012 ; delay[6]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.279      ;
 ; 1.012 ; delay[8]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.279      ;
 ; 1.012 ; delay[0]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.279      ;
 ; 1.015 ; delay[1]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.282      ;
+; 1.015 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.283      ;
+; 1.016 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.284      ;
+; 1.016 ; delay[9]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.283      ;
 ; 1.016 ; delay[7]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.283      ;
-; 1.017 ; delay[9]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.284      ;
-; 1.017 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.284      ;
+; 1.016 ; delay[5]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.283      ;
 ; 1.017 ; delay[2]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.284      ;
-; 1.018 ; delay[3]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.285      ;
-; 1.018 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.285      ;
-; 1.026 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.019 ; delay[3]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.286      ;
+; 1.025 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.293      ;
+; 1.025 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.074      ; 1.294      ;
+; 1.026 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.027 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.295      ;
+; 1.027 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
 ; 1.027 ; delay[0]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
-; 1.027 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
 ; 1.027 ; delay[8]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
-; 1.027 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
-; 1.027 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
-; 1.028 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
-; 1.028 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.294      ;
-; 1.028 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.294      ;
-; 1.028 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.294      ;
-; 1.028 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
-; 1.028 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
-; 1.028 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
-; 1.028 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.294      ;
-; 1.029 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
-; 1.029 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.295      ;
-; 1.029 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.295      ;
-; 1.029 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
-; 1.029 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
-; 1.029 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.295      ;
-; 1.029 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
-; 1.030 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.296      ;
-; 1.030 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.296      ;
-; 1.030 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
-; 1.030 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 1.296      ;
-; 1.030 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
-; 1.030 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
-; 1.031 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
-; 1.031 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.297      ;
-; 1.031 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
-; 1.032 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.299      ;
-; 1.032 ; delay[2]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.299      ;
+; 1.027 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.028 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.296      ;
+; 1.029 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.297      ;
+; 1.029 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.297      ;
+; 1.029 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.297      ;
+; 1.029 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.030 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.298      ;
+; 1.030 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.298      ;
+; 1.031 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.031 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.072      ; 1.298      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +669,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; clk   ; -3.425 ; -85.966           ;
+; clk   ; -3.106 ; -84.066           ;
 +-------+--------+-------------------+
 
 
@@ -700,7 +699,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; clk   ; -3.000 ; -73.319                         ;
+; clk   ; -3.000 ; -73.303                         ;
 +-------+--------+---------------------------------+
 
 
@@ -709,106 +708,106 @@ No paths to report.
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
-; -3.425 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.564      ;
-; -3.400 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.539      ;
-; -3.319 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.458      ;
-; -3.280 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.419      ;
-; -3.279 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.418      ;
-; -3.253 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.392      ;
-; -3.237 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.376      ;
-; -3.203 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.342      ;
-; -3.191 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.330      ;
-; -3.148 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.152      ; 4.287      ;
-; -3.050 ; beat[6]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.994      ;
-; -3.025 ; beat[7]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.969      ;
-; -2.944 ; beat[9]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.888      ;
-; -2.905 ; beat[1]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.849      ;
-; -2.880 ; beat[3]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.824      ;
-; -2.862 ; beat[4]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.806      ;
-; -2.854 ; beat[0]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.798      ;
-; -2.826 ; beat[5]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.770      ;
-; -2.816 ; beat[8]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.760      ;
-; -2.796 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.740      ;
-; -2.781 ; beat[0]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.900      ;
-; -2.777 ; beat[8]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.896      ;
-; -2.775 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.719      ;
-; -2.770 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.714      ;
-; -2.751 ; beat[2]   ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.695      ;
-; -2.743 ; beat[7]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.862      ;
-; -2.731 ; beat[6]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.675      ;
-; -2.721 ; beat[1]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.665      ;
-; -2.720 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.664      ;
-; -2.709 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.653      ;
-; -2.706 ; beat[7]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.650      ;
-; -2.696 ; beat[3]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.640      ;
-; -2.689 ; beat[3]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.808      ;
-; -2.687 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.631      ;
-; -2.671 ; beat[6]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.790      ;
-; -2.666 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.610      ;
-; -2.666 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.610      ;
-; -2.663 ; beat[2]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.607      ;
-; -2.662 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.606      ;
-; -2.657 ; beat[9]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.601      ;
-; -2.654 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.598      ;
-; -2.638 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.582      ;
-; -2.626 ; beat[4]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.745      ;
-; -2.624 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.568      ;
-; -2.619 ; beat[3]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.563      ;
-; -2.619 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.563      ;
-; -2.619 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.563      ;
-; -2.617 ; beat[5]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.561      ;
-; -2.615 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.559      ;
-; -2.612 ; beat[9]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.731      ;
-; -2.606 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.550      ;
-; -2.600 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.544      ;
-; -2.598 ; beat[1]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.542      ;
-; -2.595 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.539      ;
-; -2.593 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.537      ;
-; -2.593 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.537      ;
-; -2.590 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.534      ;
-; -2.589 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.533      ;
-; -2.586 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.530      ;
-; -2.577 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.521      ;
-; -2.571 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.515      ;
-; -2.566 ; beat[1]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.685      ;
-; -2.565 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.509      ;
-; -2.564 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.508      ;
-; -2.564 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.508      ;
-; -2.561 ; beat[4]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.505      ;
-; -2.561 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.505      ;
-; -2.560 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.504      ;
-; -2.557 ; beat[0]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.501      ;
-; -2.548 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.492      ;
-; -2.544 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.488      ;
-; -2.543 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.487      ;
-; -2.536 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.480      ;
-; -2.532 ; beat[4]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.476      ;
-; -2.529 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.473      ;
-; -2.522 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.466      ;
-; -2.520 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.464      ;
-; -2.520 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.464      ;
-; -2.518 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.462      ;
-; -2.514 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.458      ;
-; -2.509 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.453      ;
-; -2.508 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.452      ;
-; -2.507 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.451      ;
-; -2.504 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.448      ;
-; -2.493 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.437      ;
-; -2.482 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.426      ;
-; -2.478 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.422      ;
-; -2.476 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.420      ;
-; -2.473 ; beat[0]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.417      ;
-; -2.468 ; beat[2]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.412      ;
-; -2.467 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.411      ;
-; -2.459 ; beat[5]   ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 1.000        ; 0.132      ; 3.578      ;
-; -2.458 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.402      ;
-; -2.457 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.401      ;
-; -2.455 ; beat[3]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.399      ;
-; -2.453 ; beat[4]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.397      ;
-; -2.453 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.397      ;
-; -2.446 ; beat[6]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.043     ; 3.390      ;
-; -2.442 ; beat[2]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.386      ;
-; -2.438 ; beat[2]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.043     ; 3.382      ;
+; -3.106 ; beat[8]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.253      ;
+; -3.094 ; beat[0]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.241      ;
+; -3.025 ; beat[9]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.172      ;
+; -3.002 ; beat[5]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.149      ;
+; -2.971 ; beat[1]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.118      ;
+; -2.941 ; beat[7]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.088      ;
+; -2.927 ; beat[4]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.074      ;
+; -2.912 ; beat[6]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.059      ;
+; -2.911 ; beat[2]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.058      ;
+; -2.895 ; beat[8]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.854      ;
+; -2.891 ; beat[3]   ; pwn:pwn1|o_pwn       ; clk          ; clk         ; 1.000        ; 0.160      ; 4.038      ;
+; -2.883 ; beat[0]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.842      ;
+; -2.791 ; beat[5]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.750      ;
+; -2.770 ; beat[9]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.729      ;
+; -2.716 ; beat[4]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.675      ;
+; -2.714 ; beat[1]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.673      ;
+; -2.700 ; beat[2]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.659      ;
+; -2.695 ; beat[8]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.654      ;
+; -2.691 ; beat[7]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.650      ;
+; -2.683 ; beat[0]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.642      ;
+; -2.658 ; beat[3]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.617      ;
+; -2.655 ; beat[6]   ; pwn:pwn1|counter[11] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.614      ;
+; -2.591 ; beat[5]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.550      ;
+; -2.579 ; beat[8]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.538      ;
+; -2.570 ; beat[9]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.529      ;
+; -2.562 ; beat[8]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.521      ;
+; -2.530 ; beat[5]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.489      ;
+; -2.526 ; beat[7]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.485      ;
+; -2.522 ; beat[5]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.481      ;
+; -2.516 ; beat[4]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.475      ;
+; -2.514 ; beat[1]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.473      ;
+; -2.512 ; beat[0]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.471      ;
+; -2.500 ; beat[2]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.459      ;
+; -2.495 ; beat[0]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.454      ;
+; -2.483 ; beat[6]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.442      ;
+; -2.478 ; beat[9]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.437      ;
+; -2.458 ; beat[3]   ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.417      ;
+; -2.455 ; beat[2]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.414      ;
+; -2.449 ; beat[8]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.408      ;
+; -2.438 ; beat[2]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.397      ;
+; -2.436 ; beat[3]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.395      ;
+; -2.432 ; beat[4]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.391      ;
+; -2.424 ; beat[4]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.383      ;
+; -2.419 ; beat[3]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.378      ;
+; -2.416 ; beat[5]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.375      ;
+; -2.410 ; beat[7]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.369      ;
+; -2.404 ; beat[9]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.363      ;
+; -2.393 ; beat[7]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.352      ;
+; -2.383 ; beat[1]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.342      ;
+; -2.382 ; beat[0]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.341      ;
+; -2.374 ; beat[9]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.333      ;
+; -2.372 ; beat[6]   ; pwn:pwn1|counter[12] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.331      ;
+; -2.366 ; beat[1]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.325      ;
+; -2.361 ; beat[9]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.320      ;
+; -2.357 ; beat[8]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.316      ;
+; -2.357 ; beat[9]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.316      ;
+; -2.355 ; beat[6]   ; pwn:pwn1|counter[15] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.314      ;
+; -2.349 ; beat[0]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.308      ;
+; -2.343 ; beat[8]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.302      ;
+; -2.342 ; beat[9]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.301      ;
+; -2.335 ; beat[0]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.294      ;
+; -2.325 ; beat[2]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.284      ;
+; -2.318 ; beat[4]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.277      ;
+; -2.315 ; beat[8]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.274      ;
+; -2.307 ; beat[0]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.266      ;
+; -2.306 ; beat[3]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.265      ;
+; -2.299 ; beat[9]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.258      ;
+; -2.293 ; beat[8]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.252      ;
+; -2.290 ; beat[7]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.249      ;
+; -2.280 ; beat[7]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.239      ;
+; -2.277 ; beat[7]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.236      ;
+; -2.273 ; beat[7]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.232      ;
+; -2.261 ; beat[6]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.220      ;
+; -2.258 ; beat[7]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.217      ;
+; -2.257 ; beat[5]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.216      ;
+; -2.253 ; beat[1]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.212      ;
+; -2.248 ; beat[6]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.207      ;
+; -2.244 ; beat[6]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.203      ;
+; -2.243 ; beat[5]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.202      ;
+; -2.242 ; beat[6]   ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.201      ;
+; -2.240 ; beat[3]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.199      ;
+; -2.235 ; beat[5]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.194      ;
+; -2.229 ; beat[6]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.188      ;
+; -2.227 ; beat[4]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.186      ;
+; -2.227 ; beat[3]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.186      ;
+; -2.223 ; beat[3]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.182      ;
+; -2.222 ; beat[5]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.181      ;
+; -2.214 ; beat[4]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.173      ;
+; -2.211 ; beat[1]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.170      ;
+; -2.210 ; beat[4]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.169      ;
+; -2.208 ; beat[3]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.167      ;
+; -2.199 ; beat[2]   ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.158      ;
+; -2.198 ; beat[1]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.157      ;
+; -2.197 ; beat[2]   ; pwn:pwn1|counter[10] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.156      ;
+; -2.195 ; beat[4]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.154      ;
+; -2.194 ; beat[1]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.153      ;
+; -2.188 ; beat[8]   ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.147      ;
+; -2.186 ; beat[2]   ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.145      ;
+; -2.182 ; beat[2]   ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 1.000        ; -0.028     ; 3.141      ;
+; -2.179 ; beat[1]   ; pwn:pwn1|counter[13] ; clk          ; clk         ; 1.000        ; -0.028     ; 3.138      ;
 +--------+-----------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -818,105 +817,105 @@ No paths to report.
 ; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 ; 0.296 ; delay[10]            ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.297 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.417      ;
 ; 0.297 ; delay[8]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.417      ;
-; 0.298 ; delay[14]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.417      ;
+; 0.297 ; delay[6]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.417      ;
+; 0.298 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
 ; 0.298 ; delay[9]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
-; 0.298 ; delay[6]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; delay[2]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.418      ;
 ; 0.299 ; delay[7]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
-; 0.299 ; delay[16]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.418      ;
-; 0.299 ; delay[4]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
 ; 0.299 ; delay[3]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
-; 0.299 ; delay[2]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
 ; 0.299 ; delay[1]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.419      ;
-; 0.299 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
-; 0.300 ; delay[18]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.419      ;
-; 0.300 ; delay[13]            ; delay[13]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.419      ;
-; 0.301 ; delay[20]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.420      ;
-; 0.305 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.424      ;
-; 0.305 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.424      ;
-; 0.305 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.305 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.425      ;
-; 0.306 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
-; 0.306 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.301 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.421      ;
+; 0.303 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; pwn:pwn1|counter[31] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[27] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[29] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.427      ;
 ; 0.307 ; delay[0]             ; delay[0]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; pwn:pwn1|counter[4]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
-; 0.307 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
-; 0.307 ; pwn:pwn1|counter[10] ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
-; 0.307 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[11] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
-; 0.307 ; pwn:pwn1|counter[12] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.426      ;
-; 0.307 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; pwn:pwn1|counter[26] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.307 ; pwn:pwn1|counter[28] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.427      ;
-; 0.308 ; delay[21]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.427      ;
-; 0.308 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.427      ;
-; 0.309 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.436      ;
+; 0.315 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[0]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.436      ;
+; 0.316 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.437      ;
+; 0.316 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[13] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.437      ;
+; 0.317 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.317 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.437      ;
+; 0.319 ; beat[8]              ; beat[8]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.439      ;
+; 0.319 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.439      ;
 ; 0.322 ; beat[1]              ; beat[1]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.442      ;
-; 0.322 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.442      ;
-; 0.326 ; beat[7]              ; beat[7]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.446      ;
-; 0.327 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.447      ;
-; 0.327 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.447      ;
-; 0.328 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.448      ;
-; 0.328 ; beat[6]              ; beat[6]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.448      ;
-; 0.398 ; beat[9]              ; beat[9]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.518      ;
+; 0.322 ; beat[2]              ; beat[2]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.442      ;
+; 0.332 ; beat[3]              ; beat[3]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.452      ;
+; 0.339 ; beat[0]              ; beat[0]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.459      ;
+; 0.339 ; beat[5]              ; beat[5]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.459      ;
+; 0.340 ; beat[4]              ; beat[4]              ; clk          ; clk         ; 0.000        ; 0.036      ; 0.460      ;
 ; 0.446 ; delay[9]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.566      ;
+; 0.447 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.567      ;
 ; 0.447 ; delay[7]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.567      ;
 ; 0.447 ; delay[3]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.567      ;
 ; 0.447 ; delay[1]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.567      ;
-; 0.448 ; delay[13]            ; delay[14]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.567      ;
-; 0.452 ; delay[3]             ; delay[5]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.572      ;
-; 0.453 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.572      ;
-; 0.454 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.573      ;
-; 0.454 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.573      ;
-; 0.454 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.573      ;
-; 0.454 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.455 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
-; 0.455 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
-; 0.455 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
-; 0.455 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.449 ; delay[5]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.569      ;
+; 0.450 ; pwn:pwn1|counter[15] ; pwn:pwn1|counter[16] ; clk          ; clk         ; 0.000        ; 0.038      ; 0.572      ;
+; 0.452 ; pwn:pwn1|counter[3]  ; pwn:pwn1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.573      ;
+; 0.453 ; pwn:pwn1|counter[1]  ; pwn:pwn1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[7]  ; pwn:pwn1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[21] ; pwn:pwn1|counter[22] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[11] ; pwn:pwn1|counter[12] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[17] ; pwn:pwn1|counter[18] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[19] ; pwn:pwn1|counter[20] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[29] ; pwn:pwn1|counter[30] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; pwn:pwn1|counter[27] ; pwn:pwn1|counter[28] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; delay[5]             ; delay[5]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.454 ; pwn:pwn1|counter[23] ; pwn:pwn1|counter[24] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.454 ; pwn:pwn1|counter[25] ; pwn:pwn1|counter[26] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.575      ;
 ; 0.456 ; delay[8]             ; delay[9]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; delay[6]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
 ; 0.456 ; delay[0]             ; delay[1]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.576      ;
-; 0.456 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
-; 0.456 ; pwn:pwn1|counter[9]  ; pwn:pwn1|counter[10] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
-; 0.457 ; delay[5]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.457 ; delay[6]             ; delay[7]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.458 ; delay[2]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.457 ; delay[2]             ; delay[3]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.459 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.579      ;
 ; 0.459 ; delay[8]             ; delay[10]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.579      ;
+; 0.459 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.579      ;
 ; 0.459 ; delay[0]             ; delay[2]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.579      ;
-; 0.460 ; delay[14]            ; delay[16]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.579      ;
-; 0.460 ; delay[20]            ; delay[21]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.579      ;
-; 0.460 ; delay[6]             ; delay[8]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.580      ;
-; 0.461 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.580      ;
-; 0.461 ; delay[2]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.581      ;
-; 0.461 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.581      ;
-; 0.462 ; delay[18]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.035      ; 0.581      ;
-; 0.464 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.584      ;
-; 0.464 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.583      ;
-; 0.464 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.584      ;
-; 0.465 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.035      ; 0.584      ;
-; 0.465 ; pwn:pwn1|counter[30] ; pwn:pwn1|counter[31] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
-; 0.465 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.035      ; 0.584      ;
-; 0.465 ; pwn:pwn1|counter[18] ; pwn:pwn1|counter[19] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
-; 0.465 ; pwn:pwn1|counter[20] ; pwn:pwn1|counter[21] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
-; 0.465 ; pwn:pwn1|counter[24] ; pwn:pwn1|counter[25] ; clk          ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.460 ; delay[16]            ; delay[18]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.580      ;
+; 0.460 ; delay[2]             ; delay[4]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.580      ;
+; 0.460 ; delay[4]             ; delay[6]             ; clk          ; clk         ; 0.000        ; 0.036      ; 0.580      ;
+; 0.461 ; delay[18]            ; delay[20]            ; clk          ; clk         ; 0.000        ; 0.036      ; 0.581      ;
+; 0.462 ; pwn:pwn1|counter[0]  ; pwn:pwn1|counter[1]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.462 ; pwn:pwn1|counter[6]  ; pwn:pwn1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.463 ; pwn:pwn1|counter[14] ; pwn:pwn1|counter[15] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; pwn:pwn1|counter[2]  ; pwn:pwn1|counter[3]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; pwn:pwn1|counter[16] ; pwn:pwn1|counter[17] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; pwn:pwn1|counter[8]  ; pwn:pwn1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; pwn:pwn1|counter[22] ; pwn:pwn1|counter[23] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; pwn:pwn1|counter[5]  ; pwn:pwn1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; pwn:pwn1|counter[13] ; pwn:pwn1|counter[14] ; clk          ; clk         ; 0.000        ; 0.037      ; 0.585      ;
 +-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +930,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -9.001   ; 0.296 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -9.001   ; 0.296 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -284.052 ; 0.0   ; 0.0      ; 0.0     ; -101.142            ;
-;  clk             ; -284.052 ; 0.000 ; N/A      ; N/A     ; -101.142            ;
+; Worst-case Slack ; -8.549   ; 0.296 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -8.549   ; 0.296 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -280.255 ; 0.0   ; 0.0      ; 0.0     ; -101.142            ;
+;  clk             ; -280.255 ; 0.000 ; N/A      ; N/A     ; -101.142            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1000,7 +999,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 18956    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 14269    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1010,7 +1009,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 18956    ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 14269    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1092,7 +1091,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Apr 29 20:21:13 2023
+    Info: Processing started: Thu Jun 01 10:15:19 2023
 Info: Command: quartus_sta pwn_beep -c pwn_beep
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1109,14 +1108,14 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -9.001
+Info (332146): Worst-case setup slack is -8.549
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.001            -284.052 clk 
-Info (332146): Worst-case hold slack is 0.743
+    Info (332119):    -8.549            -280.255 clk 
+Info (332146): Worst-case hold slack is 0.741
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.743               0.000 clk 
+    Info (332119):     0.741               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1129,14 +1128,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.351
+Info (332146): Worst-case setup slack is -7.725
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.351            -260.993 clk 
-Info (332146): Worst-case hold slack is 0.690
+    Info (332119):    -7.725            -256.735 clk 
+Info (332146): Worst-case hold slack is 0.689
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.690               0.000 clk 
+    Info (332119):     0.689               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1147,10 +1146,10 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.425
+Info (332146): Worst-case setup slack is -3.106
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.425             -85.966 clk 
+    Info (332119):    -3.106             -84.066 clk 
 Info (332146): Worst-case hold slack is 0.296
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1160,13 +1159,13 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -73.319 clk 
+    Info (332119):    -3.000             -73.303 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Sat Apr 29 20:21:14 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Thu Jun 01 10:15:21 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

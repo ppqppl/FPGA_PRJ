@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/output_files/") File("AUTO_Buy.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6F17) Path("D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/output_files/") File("AUTO_Buy.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

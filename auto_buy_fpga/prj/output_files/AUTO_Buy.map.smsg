@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at machine_driver.v(159): always construct contains both blocking and non-blocking assignments File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v Line: 159
+Warning (10268): Verilog HDL information at machine_driver.v(159): always construct contains both blocking and non-blocking assignments File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/machine_driver.v Line: 159

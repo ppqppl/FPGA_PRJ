@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name DEVICE EP4CE6F17C8
 set_global_assignment -name TOP_LEVEL_ENTITY AUTO_Buy
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:49:03  APRIL 28, 2023"
@@ -62,24 +62,29 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_23 -to clk
-set_location_assignment PIN_24 -to key[0]
-set_location_assignment PIN_25 -to key[1]
-set_location_assignment PIN_90 -to key[2]
-set_location_assignment PIN_136 -to sel[0]
-set_location_assignment PIN_135 -to sel[1]
-set_location_assignment PIN_133 -to sel[2]
-set_location_assignment PIN_132 -to sel[3]
-set_location_assignment PIN_129 -to sel[4]
-set_location_assignment PIN_128 -to sel[5]
-set_location_assignment PIN_119 -to seg[0]
-set_location_assignment PIN_121 -to seg[1]
-set_location_assignment PIN_124 -to seg[2]
-set_location_assignment PIN_115 -to seg[3]
-set_location_assignment PIN_114 -to seg[4]
-set_location_assignment PIN_120 -to seg[5]
-set_location_assignment PIN_125 -to seg[6]
-set_location_assignment PIN_113 -to seg[7]
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_E15 -to key[0]
+set_location_assignment PIN_E16 -to key[1]
+set_location_assignment PIN_M16 -to key[2]
+set_location_assignment PIN_A4 -to sel[0]
+set_location_assignment PIN_B4 -to sel[1]
+set_location_assignment PIN_A3 -to sel[2]
+set_location_assignment PIN_B3 -to sel[3]
+set_location_assignment PIN_A2 -to sel[4]
+set_location_assignment PIN_B1 -to sel[5]
+set_location_assignment PIN_B7 -to seg[0]
+set_location_assignment PIN_A8 -to seg[1]
+set_location_assignment PIN_A6 -to seg[2]
+set_location_assignment PIN_B5 -to seg[3]
+set_location_assignment PIN_B6 -to seg[4]
+set_location_assignment PIN_A7 -to seg[5]
+set_location_assignment PIN_B8 -to seg[6]
+set_location_assignment PIN_A5 -to seg[7]
+set_location_assignment PIN_M15 -to rst_n
+set_location_assignment PIN_D16 -to led[3]
+set_location_assignment PIN_G15 -to led[0]
+set_location_assignment PIN_F16 -to led[1]
+set_location_assignment PIN_F15 -to led[2]
 set_global_assignment -name VERILOG_FILE ../src/sel_driver.v
 set_global_assignment -name VERILOG_FILE ../src/seg_driver.v
 set_global_assignment -name VERILOG_FILE ../src/machine_driver.v
@@ -90,17 +95,4 @@ set_global_assignment -name VERILOG_FILE ../src/key_debounce.v
 set_global_assignment -name VERILOG_FILE ../src/freq_select.v
 set_global_assignment -name VERILOG_FILE ../src/beep_driver.v
 set_global_assignment -name VERILOG_FILE ../src/AUTO_Buy.v
-set_location_assignment PIN_89 -to rst_n
-set_location_assignment PIN_51 -to led[3]
-set_location_assignment PIN_46 -to led[0]
-set_location_assignment PIN_49 -to led[1]
-set_location_assignment PIN_50 -to led[2]
-set_location_assignment PIN_52 -to lan_led[0]
-set_location_assignment PIN_53 -to lan_led[1]
-set_location_assignment PIN_54 -to lan_led[2]
-set_location_assignment PIN_55 -to lan_led[3]
-set_location_assignment PIN_58 -to lan_led[4]
-set_location_assignment PIN_59 -to lan_led[5]
-set_location_assignment PIN_60 -to lan_led[6]
-set_location_assignment PIN_73 -to beep
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

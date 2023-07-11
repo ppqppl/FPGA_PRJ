@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Apr 29 20:21:03 2023
+Analysis & Synthesis Status : Successful - Thu Jun 01 10:15:09 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : pwn_beep
 Top-level Entity Name : sky
 Family : Cyclone IV E
-Total logic elements : 543
-    Total combinational functions : 543
+Total logic elements : 529
+    Total combinational functions : 529
     Dedicated logic registers : 66
 Total registers : 66
 Total pins : 3

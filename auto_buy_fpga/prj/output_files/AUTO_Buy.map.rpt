@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AUTO_Buy
-Fri Apr 28 17:54:11 2023
+Sat May 06 09:51:52 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 28 17:54:11 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 06 09:51:52 2023           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; AUTO_Buy                                        ;
 ; Top-level Entity Name              ; AUTO_Buy                                        ;
@@ -91,7 +91,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Device                                                           ; EP4CE6F17C8        ;                    ;
 ; Top-level entity name                                            ; AUTO_Buy           ; AUTO_Buy           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -200,31 +200,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; ../src/sel_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v                                      ;         ;
-; ../src/seg_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v                                      ;         ;
-; ../src/machine_driver.v          ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v                                  ;         ;
-; ../src/led_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/led_driver.v                                      ;         ;
-; ../src/lanterns.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/lanterns.v                                        ;         ;
-; ../src/key_debounce.v            ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v                                    ;         ;
-; ../src/freq_select.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v                                     ;         ;
-; ../src/beep_driver.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v                                     ;         ;
-; ../src/AUTO_Buy.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v                                        ;         ;
+; ../src/sel_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v                                      ;         ;
+; ../src/seg_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v                                      ;         ;
+; ../src/machine_driver.v          ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/machine_driver.v                                  ;         ;
+; ../src/led_driver.v              ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/led_driver.v                                      ;         ;
+; ../src/lanterns.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/lanterns.v                                        ;         ;
+; ../src/key_debounce.v            ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/key_debounce.v                                    ;         ;
+; ../src/freq_select.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/freq_select.v                                     ;         ;
+; ../src/beep_driver.v             ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/beep_driver.v                                     ;         ;
+; ../src/AUTO_Buy.v                ; yes             ; User Verilog HDL File        ; D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v                                        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/environment/ide/quartus_18.1.0.625/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
-; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_l9m.tdf                             ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_akh.tdf                        ;         ;
-; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf                              ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_7pc.tdf                                ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_8pc.tdf                                ;         ;
-; db/lpm_divide_o9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_o9m.tdf                             ;         ;
-; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_dkh.tdf                        ;         ;
-; db/alt_u_div_e4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_e4f.tdf                              ;         ;
-; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_ihm.tdf                             ;         ;
-; db/lpm_divide_fcm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_fcm.tdf                             ;         ;
-; db/sign_div_unsign_4nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_4nh.tdf                        ;         ;
-; db/alt_u_div_s9f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf                              ;         ;
+; db/lpm_divide_l9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_l9m.tdf                             ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_akh.tdf                        ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_84f.tdf                              ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/add_sub_7pc.tdf                                ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/add_sub_8pc.tdf                                ;         ;
+; db/lpm_divide_o9m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_o9m.tdf                             ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_dkh.tdf                        ;         ;
+; db/alt_u_div_e4f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_e4f.tdf                              ;         ;
+; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_ihm.tdf                             ;         ;
+; db/lpm_divide_fcm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_fcm.tdf                             ;         ;
+; db/sign_div_unsign_4nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_4nh.tdf                        ;         ;
+; db/alt_u_div_s9f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_s9f.tdf                              ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
@@ -846,148 +846,148 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Apr 28 17:53:57 2023
+    Info: Processing started: Sat May 06 09:51:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AUTO_Buy -c AUTO_Buy
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/sel_driver.v
-    Info (12023): Found entity 1: sel_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/seg_driver.v
-    Info (12023): Found entity 1: seg_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/machine_driver.v
-    Info (12023): Found entity 1: machine_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/led_driver.v
-    Info (12023): Found entity 1: led_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/led_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/lanterns.v
-    Info (12023): Found entity 1: lanterns File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/lanterns.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/key_driver.v
-    Info (12023): Found entity 1: key_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/key_debounce.v
-    Info (12023): Found entity 1: key_debounce File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/freq_select.v
-    Info (12023): Found entity 1: freq_select File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/beep_driver.v
-    Info (12023): Found entity 1: beep_drive File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_bug_fpga/src/auto_buy.v
-    Info (12023): Found entity 1: AUTO_Buy File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/sel_driver.v
+    Info (12023): Found entity 1: sel_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/seg_driver.v
+    Info (12023): Found entity 1: seg_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/machine_driver.v
+    Info (12023): Found entity 1: machine_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/machine_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/led_driver.v
+    Info (12023): Found entity 1: led_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/led_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/lanterns.v
+    Info (12023): Found entity 1: lanterns File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/lanterns.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/key_driver.v
+    Info (12023): Found entity 1: key_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/key_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/key_debounce.v
+    Info (12023): Found entity 1: key_debounce File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/key_debounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/freq_select.v
+    Info (12023): Found entity 1: freq_select File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/freq_select.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/beep_driver.v
+    Info (12023): Found entity 1: beep_drive File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/beep_driver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/auto_buy_fpga/src/auto_buy.v
+    Info (12023): Found entity 1: AUTO_Buy File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 1
 Info (12127): Elaborating entity "AUTO_Buy" for the top level hierarchy
-Info (12128): Elaborating entity "sel_drive" for hierarchy "sel_drive:inst_sel_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 34
-Warning (10230): Verilog HDL assignment warning at sel_driver.v(37): truncated value with size 32 to match size of target (21) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
-Warning (10240): Verilog HDL Always Construct warning at sel_driver.v(57): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(101): variable "price_out" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 101
-Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(109): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 109
-Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(117): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 117
-Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(125): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 125
-Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(133): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 133
-Info (10041): Inferred latch for "next_state.state5" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (10041): Inferred latch for "next_state.state4" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (10041): Inferred latch for "next_state.state3" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (10041): Inferred latch for "next_state.state2" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (10041): Inferred latch for "next_state.state1" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (10041): Inferred latch for "next_state.state0" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 57
-Info (12128): Elaborating entity "seg_drive" for hierarchy "seg_drive:inst_seg_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 47
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(16): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(17): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 17
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(19): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(20): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(22): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
-Warning (10230): Verilog HDL assignment warning at seg_driver.v(23): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
-Info (12128): Elaborating entity "machine_drive" for hierarchy "machine_drive:inst_machine_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 59
-Warning (10230): Verilog HDL assignment warning at machine_driver.v(72): truncated value with size 32 to match size of target (2) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/machine_driver.v Line: 72
-Info (12128): Elaborating entity "led_drive" for hierarchy "led_drive:inst_led" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 68
-Info (12128): Elaborating entity "freq_select" for hierarchy "freq_select:inst_freq_select" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 78
-Warning (10272): Verilog HDL Case Statement warning at freq_select.v(220): case item expression covers a value already covered by a previous case item File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 220
-Warning (10230): Verilog HDL assignment warning at freq_select.v(311): truncated value with size 20 to match size of target (19) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/freq_select.v Line: 311
-Info (12128): Elaborating entity "lanterns" for hierarchy "lanterns:inst_lanterns" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 87
-Info (12128): Elaborating entity "beep_drive" for hierarchy "beep_drive:inst_beep_drive" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 97
-Info (12128): Elaborating entity "key_debounce" for hierarchy "key_debounce:inst_key_debounce_key0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 107
-Warning (10230): Verilog HDL assignment warning at key_debounce.v(30): truncated value with size 32 to match size of target (20) File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/key_debounce.v Line: 30
+Info (12128): Elaborating entity "sel_drive" for hierarchy "sel_drive:inst_sel_drive" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 34
+Warning (10230): Verilog HDL assignment warning at sel_driver.v(37): truncated value with size 32 to match size of target (21) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 37
+Warning (10240): Verilog HDL Always Construct warning at sel_driver.v(57): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(101): variable "price_out" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 101
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(109): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 109
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(117): variable "price_need" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 117
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(125): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 125
+Warning (10235): Verilog HDL Always Construct warning at sel_driver.v(133): variable "price_put" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 133
+Info (10041): Inferred latch for "next_state.state5" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state4" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state3" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state2" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state1" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (10041): Inferred latch for "next_state.state0" at sel_driver.v(57) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 57
+Info (12128): Elaborating entity "seg_drive" for hierarchy "seg_drive:inst_seg_drive" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 47
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(16): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(17): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 17
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(19): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 19
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(20): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 20
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(22): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 22
+Warning (10230): Verilog HDL assignment warning at seg_driver.v(23): truncated value with size 32 to match size of target (4) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 23
+Info (12128): Elaborating entity "machine_drive" for hierarchy "machine_drive:inst_machine_drive" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 59
+Warning (10230): Verilog HDL assignment warning at machine_driver.v(72): truncated value with size 32 to match size of target (2) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/machine_driver.v Line: 72
+Info (12128): Elaborating entity "led_drive" for hierarchy "led_drive:inst_led" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 68
+Info (12128): Elaborating entity "freq_select" for hierarchy "freq_select:inst_freq_select" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 78
+Warning (10272): Verilog HDL Case Statement warning at freq_select.v(220): case item expression covers a value already covered by a previous case item File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/freq_select.v Line: 220
+Warning (10230): Verilog HDL assignment warning at freq_select.v(311): truncated value with size 20 to match size of target (19) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/freq_select.v Line: 311
+Info (12128): Elaborating entity "lanterns" for hierarchy "lanterns:inst_lanterns" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 87
+Info (12128): Elaborating entity "beep_drive" for hierarchy "beep_drive:inst_beep_drive" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 97
+Info (12128): Elaborating entity "key_debounce" for hierarchy "key_debounce:inst_key_debounce_key0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 107
+Warning (10230): Verilog HDL assignment warning at key_debounce.v(30): truncated value with size 32 to match size of target (20) File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/key_debounce.v Line: 30
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 17
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 17
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/AUTO_Buy.v Line: 17
+    Warning (12110): Net "led_value[4]" is missing source, defaulting to GND File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/AUTO_Buy.v Line: 17
 Info (278001): Inferred 10 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod5" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod4" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 22
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div1" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod1" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 17
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod3" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sel_drive:inst_sel_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
-Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod5" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
-Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod5" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod5" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod4" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div2" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod2" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Div1" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod1" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seg_drive:inst_seg_drive|Mod3" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 20
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sel_drive:inst_sel_drive|Mod0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 37
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod5" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 23
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod5" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 23
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l9m.tdf
-    Info (12023): Found entity 1: lpm_divide_l9m File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_l9m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_l9m File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_l9m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_akh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_akh File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
-    Info (12023): Found entity 1: alt_u_div_84f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_84f File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_84f.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_7pc.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_7pc File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/add_sub_8pc.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
-Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (12023): Found entity 1: add_sub_8pc File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_o9m.tdf
-    Info (12023): Found entity 1: lpm_divide_o9m File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_o9m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_o9m File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_o9m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dkh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_dkh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_dkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_e4f.tdf
-    Info (12023): Found entity 1: alt_u_div_e4f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_e4f.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Div0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
-Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Div0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 16
+    Info (12023): Found entity 1: alt_u_div_e4f File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_e4f.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Div0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Div0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 16
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
-    Info (12023): Found entity 1: lpm_divide_ihm File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_ihm.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod2" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
-Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod2" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 19
+    Info (12023): Found entity 1: lpm_divide_ihm File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_ihm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod2" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 19
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod2" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod3" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
-Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod3" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/seg_driver.v Line: 20
+Info (12130): Elaborated megafunction instantiation "seg_drive:inst_seg_drive|lpm_divide:Mod3" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 20
+Info (12133): Instantiated megafunction "seg_drive:inst_seg_drive|lpm_divide:Mod3" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/seg_driver.v Line: 20
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "sel_drive:inst_sel_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
-Info (12133): Instantiated megafunction "sel_drive:inst_sel_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/sel_driver.v Line: 37
+Info (12130): Elaborated megafunction instantiation "sel_drive:inst_sel_drive|lpm_divide:Mod0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 37
+Info (12133): Instantiated megafunction "sel_drive:inst_sel_drive|lpm_divide:Mod0" with the following parameter: File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/sel_driver.v Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "22"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fcm.tdf
-    Info (12023): Found entity 1: lpm_divide_fcm File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/lpm_divide_fcm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_fcm File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/lpm_divide_fcm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_4nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_4nh File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/sign_div_unsign_4nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_4nh File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/sign_div_unsign_4nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s9f.tdf
-    Info (12023): Found entity 1: alt_u_div_s9f File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_s9f File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_s9f.tdf Line: 26
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: D:/code-file/FPGA_PRJ/auto_bug_fpga/src/beep_driver.v Line: 7
+Info (13000): Registers with preset signals will power-up high File: D:/code-file/FPGA_PRJ/auto_buy_fpga/src/beep_driver.v Line: 7
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider|add_sub_6_result_int[0]~0" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_84f.tdf Line: 56
-    Info (17048): Logic cell "sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider|add_sub_20_result_int[2]~18" File: D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/db/alt_u_div_s9f.tdf Line: 91
-Info (144001): Generated suppressed messages file D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/output_files/AUTO_Buy.map.smsg
+    Info (17048): Logic cell "seg_drive:inst_seg_drive|lpm_divide:Mod3|lpm_divide_l9m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider|add_sub_6_result_int[0]~0" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_84f.tdf Line: 56
+    Info (17048): Logic cell "sel_drive:inst_sel_drive|lpm_divide:Mod0|lpm_divide_fcm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_s9f:divider|add_sub_20_result_int[2]~18" File: D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/db/alt_u_div_s9f.tdf Line: 91
+Info (144001): Generated suppressed messages file D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/output_files/AUTO_Buy.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 1174 device resources after synthesis - the final resource count might be different
@@ -996,14 +996,14 @@ Info (21057): Implemented 1174 device resources after synthesis - the final reso
     Info (21061): Implemented 1143 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Fri Apr 28 17:54:11 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Processing ended: Sat May 06 09:51:52 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/code-file/FPGA_PRJ/auto_bug_fpga/prj/output_files/AUTO_Buy.map.smsg.
+The suppressed messages can be found in D:/code-file/FPGA_PRJ/auto_buy_fpga/prj/output_files/AUTO_Buy.map.smsg.
 
 

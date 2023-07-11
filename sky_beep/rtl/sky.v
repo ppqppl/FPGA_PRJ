@@ -1,11 +1,11 @@
-//天空之城  简易音乐播放，方法比较笨
-
-module sky(clk,rst_n,beep);
-
-	input clk;
-	input rst_n;
+module sky(
+	input 		clk,
+	input 		rst_n,
 	
-	output beep;
+	output 		beep
+);
+
+
 	
 	reg [31:0]counter_arr;
 	wire [31:0]counter_ccr;
@@ -155,38 +155,3 @@ module sky(clk,rst_n,beep);
 			default:counter_arr = 0;
 		endcase 
 endmodule
-
-/*			爱如火
-			1,2:counter_arr = M3;
-			3,4:counter_arr = M2;
-			5,6,7,8:counter_arr = M3;
-			10,11,12,14,15,16:counter_arr = M3;
-			17,18,19:counter_arr = M2;
-			20,21,22:counter_arr = M5;
-			23,24,25,26:counter_arr = M3;
-
-			29,30:counter_arr = M3;
-			31,32:counter_arr = M2;
-			33,34,35,36:counter_arr = M3;
-			38,39,40,42,43,44:counter_arr = M3;
-			45,46:counter_arr = M2;
-			47,48,49,50:counter_arr = M1;
-			50,52,53,54:counter_arr = M2;
-
-			58,59:counter_arr = M3;
-			60,61:counter_arr = M2;
-			62,63,64,65:counter_arr = M3;
-			67,68,69,71,72,73:counter_arr = M3;
-			74,75:counter_arr = M2;
-			76,77,78:counter_arr = M5;
-			79,80,81,82:counter_arr = M3;
-
-			85,86:counter_arr = H1;
-			87,88,89,90:counter_arr = M7;
-			91,92,93,94:counter_arr = M3;
-			96,97:counter_arr = M3;
-			98,99,100,101:counter_arr = M5;
-			102,103:counter_arr = M3;
-			104,105,106,107:counter_arr = M6;
-			108,109,110,111:counter_arr = M5;
-*/

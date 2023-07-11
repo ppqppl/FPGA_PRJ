@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat May 06 23:42:38 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : Paj7620_top
+Top-level Entity Name : prj7620_beep_seg
+Family : Cyclone IV E
+Total logic elements : 11,222
+    Total combinational functions : 4,296
+    Dedicated logic registers : 9,090
+Total registers : 9090
+Total pins : 32
+Total virtual pins : 0
+Total memory bits : 88,064
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

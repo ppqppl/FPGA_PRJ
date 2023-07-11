@@ -1,19 +1,19 @@
 module pwn(
-	clk,
-	rst_n,
-	cnt_en,
-	counter_arr,
-	counter_ccr,
-	o_pwn
+	input 			clk			,
+	input 			rst_n		,
+	input 			cnt_en		,
+	input 	[31:0]	counter_arr	,
+	input 	[31:0]	counter_ccr	,
+	output 	reg 	o_pwn
 );
 
-	input clk;
-	input rst_n;
-	input cnt_en;
-	input [31:0]counter_arr;
-	input [31:0]counter_ccr;
+	// input clk;
+	// input rst_n;
+	// input cnt_en;
+	// input [31:0]counter_arr;
+	// input [31:0]counter_ccr;
 	
-	output reg o_pwn;
+	// output reg o_pwn;
 	
 	reg [31:0]counter;
 	

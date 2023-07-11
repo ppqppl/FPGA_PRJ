@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM_B
-Fri Apr 28 10:54:11 2023
+Tue Jun 27 21:14:28 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -10,7 +10,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |PWM_Beep
+ 13. Parameter Settings for User Entity Instance: freq_select:u_freq_select
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +47,20 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Apr 28 10:54:11 2023               ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 27 21:14:28 2023           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; PWM_B                                           ;
 ; Top-level Entity Name              ; PWM_Beep                                        ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 157                                             ;
+;     Total combinational functions  ; 156                                             ;
+;     Dedicated logic registers      ; 60                                              ;
+; Total registers                    ; 60                                              ;
+; Total pins                         ; 3                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -148,11 +159,188 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; ../rtl/gen_pwm.v                 ; yes             ; User Verilog HDL File  ; D:/code-file/FPGA_PRJ/pwm_beep/rtl/gen_pwm.v     ;         ;
+; ../rtl/freq_select.v             ; yes             ; User Verilog HDL File  ; D:/code-file/FPGA_PRJ/pwm_beep/rtl/freq_select.v ;         ;
+; ../rtl/pwm_beep.v                ; yes             ; User Verilog HDL File  ; D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v    ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 157       ;
+;                                             ;           ;
+; Total combinational functions               ; 156       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 95        ;
+;     -- 3 input functions                    ; 11        ;
+;     -- <=2 input functions                  ; 50        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 113       ;
+;     -- arithmetic mode                      ; 43        ;
+;                                             ;           ;
+; Total registers                             ; 60        ;
+;     -- Dedicated logic registers            ; 60        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 3         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 60        ;
+; Total fan-out                               ; 710       ;
+; Average fan-out                             ; 3.20      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+; |PWM_Beep                      ; 156 (0)             ; 60 (0)                    ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |PWM_Beep                           ; PWM_Beep    ; work         ;
+;    |freq_select:u_freq_select| ; 156 (156)           ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PWM_Beep|freq_select:u_freq_select ; freq_select ; work         ;
+;    |gen_pwm:u_gen_pwm|         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PWM_Beep|gen_pwm:u_gen_pwm         ; gen_pwm     ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------+----------------------------------------------------+
+; Register name                           ; Reason for Removal                                 ;
++-----------------------------------------+----------------------------------------------------+
+; freq_select:u_freq_select|freq_data[0]  ; Stuck at GND due to stuck port data_in             ;
+; freq_select:u_freq_select|freq_data[9]  ; Merged with freq_select:u_freq_select|freq_data[3] ;
+; freq_select:u_freq_select|freq_data[14] ; Merged with freq_select:u_freq_select|freq_data[5] ;
+; freq_select:u_freq_select|freq_data[15] ; Merged with freq_select:u_freq_select|freq_data[6] ;
+; Total Number of Removed Registers = 4   ;                                                    ;
++-----------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; gen_pwm:u_gen_pwm|beep                  ; 1       ;
+; freq_select:u_freq_select|freq_data[7]  ; 2       ;
+; freq_select:u_freq_select|freq_data[1]  ; 2       ;
+; freq_select:u_freq_select|freq_data[2]  ; 2       ;
+; freq_select:u_freq_select|freq_data[13] ; 4       ;
+; freq_select:u_freq_select|freq_data[12] ; 4       ;
+; freq_select:u_freq_select|freq_data[11] ; 3       ;
+; Total number of inverted registers = 7  ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PWM_Beep|freq_select:u_freq_select|lut_data[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |PWM_Beep ;
++----------------+--------------------------+------------------------------+
+; Parameter Name ; Value                    ; Type                         ;
++----------------+--------------------------+------------------------------+
+; CNT_MAX        ; 111001001110000110111111 ; Unsigned Binary              ;
+; DO             ; 1011101010000110         ; Unsigned Binary              ;
+; RE             ; 1010010100001010         ; Unsigned Binary              ;
+; MI             ; 1001010000001100         ; Unsigned Binary              ;
+; FA             ; 1001001010101110         ; Unsigned Binary              ;
+; SO             ; 0111110001101010         ; Unsigned Binary              ;
+; LA             ; 0110111011110000         ; Unsigned Binary              ;
+; XI             ; 0110001100111000         ; Unsigned Binary              ;
++----------------+--------------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: freq_select:u_freq_select ;
++----------------+--------------------------+----------------------------+
+; Parameter Name ; Value                    ; Type                       ;
++----------------+--------------------------+----------------------------+
+; CNT_MAX        ; 111001001110000110111111 ; Unsigned Binary            ;
+; NUM_FRE        ; 110000                   ; Unsigned Binary            ;
+; DO_0           ; 1100101100100000         ; Unsigned Binary            ;
+; DO             ; 1011101010000110         ; Unsigned Binary            ;
+; RE             ; 1010010100001010         ; Unsigned Binary            ;
+; MI             ; 1001010000001100         ; Unsigned Binary            ;
+; FA             ; 1001001010101110         ; Unsigned Binary            ;
+; SO             ; 0111110001101010         ; Unsigned Binary            ;
+; LA             ; 0110111011110000         ; Unsigned Binary            ;
+; XI             ; 0110001100111000         ; Unsigned Binary            ;
++----------------+--------------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 3                           ;
+; cycloneiii_ff         ; 60                          ;
+;     CLR               ; 44                          ;
+;     CLR SCLR          ; 16                          ;
+; cycloneiii_lcell_comb ; 157                         ;
+;     arith             ; 43                          ;
+;         2 data inputs ; 43                          ;
+;     normal            ; 114                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 95                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.63                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,21 +349,33 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Apr 28 10:54:01 2023
+    Info: Processing started: Tue Jun 27 21:14:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM_Beep -c PWM_B
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/pwm_beep/rtl/gen_pwm.v
+    Info (12023): Found entity 1: gen_pwm File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/gen_pwm.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/pwm_beep/rtl/freq_select.v
+    Info (12023): Found entity 1: freq_select File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/freq_select.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/pwm_beep/rtl/pwm_beep.v
-    Info (12023): Found entity 1: PWM_Beep File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 47
+    Info (12023): Found entity 1: PWM_Beep File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 1
 Info (12127): Elaborating entity "PWM_Beep" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at pwm_beep.v(124): truncated value with size 32 to match size of target (20) File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 124
-Error (12006): Node instance "time_music0" instantiates undefined entity "time_music". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 74
-Error (12006): Node instance "hz_sel0" instantiates undefined entity "hz_sel". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 80
-Error (12006): Node instance "hz0" instantiates undefined entity "hz". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 85
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
-    Error: Peak virtual memory: 4709 megabytes
-    Error: Processing ended: Fri Apr 28 10:54:11 2023
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:08
+Info (12128): Elaborating entity "freq_select" for hierarchy "freq_select:u_freq_select" File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 34
+Warning (10230): Verilog HDL assignment warning at freq_select.v(129): truncated value with size 16 to match size of target (15) File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/freq_select.v Line: 129
+Info (12128): Elaborating entity "gen_pwm" for hierarchy "gen_pwm:u_gen_pwm" File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/pwm_beep.v Line: 43
+Info (13000): Registers with preset signals will power-up high File: D:/code-file/FPGA_PRJ/pwm_beep/rtl/gen_pwm.v Line: 8
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 160 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 157 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Tue Jun 27 21:14:28 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

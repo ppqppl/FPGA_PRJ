@@ -1,5 +1,5 @@
 Flow report for pwn_beep
-Sat Apr 29 20:21:16 2023
+Thu Jun 01 10:15:22 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr 29 20:21:16 2023           ;
+; Flow Status                        ; Successful - Thu Jun 01 10:15:22 2023           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; pwn_beep                                        ;
 ; Top-level Entity Name              ; sky                                             ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE6E22C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 543 / 6,272 ( 9 % )                             ;
-;     Total combinational functions  ; 543 / 6,272 ( 9 % )                             ;
+; Total logic elements               ; 529 / 6,272 ( 8 % )                             ;
+;     Total combinational functions  ; 529 / 6,272 ( 8 % )                             ;
 ;     Dedicated logic registers      ; 66 / 6,272 ( 1 % )                              ;
 ; Total registers                    ; 66                                              ;
 ; Total pins                         ; 3 / 92 ( 3 % )                                  ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/29/2023 20:20:49 ;
+; Start date & time ; 06/01/2023 10:14:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwn_beep            ;
 +-------------------+---------------------+
@@ -75,13 +75,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1019189133943.168277084917660          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1098161508338.168558569624744          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; sky         ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; sky         ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; sky         ; Top            ;
@@ -97,12 +96,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4817 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:06     ; 1.1                     ; 5843 MB             ; 00:00:02                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4806 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4649 MB             ; 00:00:01                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4814 MB             ; 00:00:10                           ;
+; Fitter               ; 00:00:06     ; 1.1                     ; 5835 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4807 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

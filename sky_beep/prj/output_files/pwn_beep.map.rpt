@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwn_beep
-Sat Apr 29 20:21:03 2023
+Thu Jun 01 10:15:09 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 29 20:21:03 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 01 10:15:09 2023           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; pwn_beep                                        ;
 ; Top-level Entity Name              ; sky                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 543                                             ;
-;     Total combinational functions  ; 543                                             ;
+; Total logic elements               ; 529                                             ;
+;     Total combinational functions  ; 529                                             ;
 ;     Dedicated logic registers      ; 66                                              ;
 ; Total registers                    ; 66                                              ;
 ; Total pins                         ; 3                                               ;
@@ -185,16 +185,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 543     ;
+; Estimated Total logic elements              ; 529     ;
 ;                                             ;         ;
-; Total combinational functions               ; 543     ;
+; Total combinational functions               ; 529     ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 388     ;
-;     -- 3 input functions                    ; 63      ;
-;     -- <=2 input functions                  ; 92      ;
+;     -- 4 input functions                    ; 360     ;
+;     -- 3 input functions                    ; 70      ;
+;     -- <=2 input functions                  ; 99      ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 466     ;
+;     -- normal mode                          ; 452     ;
 ;     -- arithmetic mode                      ; 77      ;
 ;                                             ;         ;
 ; Total registers                             ; 66      ;
@@ -205,10 +205,10 @@ refer to the applicable agreement for further details.
 ;                                             ;         ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ;                                             ;         ;
-; Maximum fan-out node                        ; beat[2] ;
-; Maximum fan-out                             ; 122     ;
-; Total fan-out                               ; 2206    ;
-; Average fan-out                             ; 3.59    ;
+; Maximum fan-out node                        ; beat[1] ;
+; Maximum fan-out                             ; 133     ;
+; Total fan-out                               ; 2129    ;
+; Average fan-out                             ; 3.54    ;
 +---------------------------------------------+---------+
 
 
@@ -217,7 +217,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |sky                       ; 543 (483)           ; 66 (33)                   ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |sky                ; sky         ; work         ;
+; |sky                       ; 529 (469)           ; 66 (33)                   ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |sky                ; sky         ; work         ;
 ;    |pwn:pwn1|              ; 60 (60)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sky|pwn:pwn1       ; pwn         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -268,19 +268,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 24                          ;
 ;     CLR SLD           ; 32                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-; cycloneiii_lcell_comb ; 543                         ;
+; cycloneiii_lcell_comb ; 529                         ;
 ;     arith             ; 77                          ;
 ;         2 data inputs ; 62                          ;
 ;         3 data inputs ; 15                          ;
-;     normal            ; 466                         ;
+;     normal            ; 452                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 388                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 360                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.50                       ;
-; Average LUT depth     ; 7.78                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 7.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -299,12 +299,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Apr 29 20:20:49 2023
+    Info: Processing started: Thu Jun 01 10:14:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwn_beep -c pwn_beep
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/sky_beep/rtl/sky.v
-    Info (12023): Found entity 1: sky File: D:/code-file/FPGA_PRJ/sky_beep/rtl/sky.v Line: 3
+    Info (12023): Found entity 1: sky File: D:/code-file/FPGA_PRJ/sky_beep/rtl/sky.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/sky_beep/rtl/pwn_beep.v
     Info (12023): Found entity 1: pwn_beep File: D:/code-file/FPGA_PRJ/sky_beep/rtl/pwn_beep.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /code-file/fpga_prj/sky_beep/rtl/pwn.v
@@ -314,14 +314,14 @@ Info (12128): Elaborating entity "pwn" for hierarchy "pwn:pwn1" File: D:/code-fi
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 546 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 532 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 543 logic cells
+    Info (21061): Implemented 529 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Sat Apr 29 20:21:03 2023
-    Info: Elapsed time: 00:00:14
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Thu Jun 01 10:15:09 2023
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:10
 
 
